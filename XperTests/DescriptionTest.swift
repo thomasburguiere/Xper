@@ -20,8 +20,8 @@ class DescriptionTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
-    func test_description_is_complete() {
+    
+    func test_description_with_categorical_is_complete() {
         let description = Description()
         let descriptor = CategoricalDescriptor(name:"descriptor")
         descriptor.states = [State(name:"a"), State(name:"b")]
@@ -32,6 +32,25 @@ class DescriptionTest: XCTestCase {
         XCTAssertFalse(description.isDescriptionComplete())
         
         des.selectedStates.append(State(name:"c"))
+        XCTAssertTrue(description.isDescriptionComplete())
+        
+    }
+    
+    func test_description_with_quantitative_is_complete() {
+        let description = Description()
+        let descriptor = QuantitativeDescriptor(name:"descriptor")
+        
+        let qm = QuantitativeMeasure()
+        
+        
+        
+        let des = DescriptionElementState()
+        des.quantitativeMeasure = qm
+        description.descriptionElements = [descriptor:des]
+        XCTAssertFalse(description.isDescriptionComplete())
+        
+        qm.max = 2.0
+        qm.min = 1.0
         XCTAssertTrue(description.isDescriptionComplete())
         
     }
