@@ -26,7 +26,6 @@
 		E9ECC4B91C9218A9002833FF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4B81C9218A9002833FF /* Item.swift */; };
 		E9ECC4BB1C9219A0002833FF /* DatasetObjectWithResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4BA1C9219A0002833FF /* DatasetObjectWithResources.swift */; };
 		E9ECC4BD1C921A0D002833FF /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4BC1C921A0D002833FF /* Resource.swift */; };
-		E9ECC4C01C921B34002833FF /* ItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4BF1C921B34002833FF /* ItemTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		E9ECC4B81C9218A9002833FF /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E9ECC4BA1C9219A0002833FF /* DatasetObjectWithResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetObjectWithResources.swift; sourceTree = "<group>"; };
 		E9ECC4BC1C921A0D002833FF /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		E9ECC4BF1C921B34002833FF /* ItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +179,6 @@
 		E9ECC4BE1C921B19002833FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E9ECC4BF1C921B34002833FF /* ItemTests.swift */,
 				E939E5D11C923790001F1F93 /* QuantitativeMeasureTest.swift */,
 				E939E5D31C923B2C001F1F93 /* DescriptionTest.swift */,
 			);
@@ -344,7 +341,6 @@
 				E939E5D41C923B2C001F1F93 /* DescriptionTest.swift in Sources */,
 				E939E5D21C923790001F1F93 /* QuantitativeMeasureTest.swift in Sources */,
 				E9ECC49F1C921864002833FF /* XperTests.swift in Sources */,
-				E9ECC4C01C921B34002833FF /* ItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
