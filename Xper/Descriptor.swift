@@ -29,4 +29,11 @@ class Descriptor: Hashable {
         }
     }
     
+    
+    enum Type {
+        case Categorical
+        case Quantitative
+        case Computed
+        case Unknown
+    }
 }

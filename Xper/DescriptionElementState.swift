@@ -10,7 +10,7 @@ import Foundation
 
 class DescriptionElementState {
     var selectedStates: [State] = []
-    var quantitativeMeasure: Float = 0.0
+    var quantitativeMeasure: QuantitativeMeasure?
     var unknown: Bool = false
     var contextualWeigh: Int = 3
 }

@@ -1,5 +1,5 @@
 //
-//  CategoricalDescriptor.swift
+//  QuantitativeDescriptor.swift
 //  Xper
 //
 //  Created by Thomas Burguiere on 10/03/16.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-class CategoricalDescriptor : Descriptor {
-    var states : [State] = []
+class QuantitativeDescriptor : Descriptor {
+    var measurementUnit: String?
+    
 }
