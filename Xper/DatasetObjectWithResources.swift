@@ -11,6 +11,6 @@ import Foundation
 protocol DatasetObjectWithResources {
     var resources: [Resource] {get set}
     func addResource (addedResource: Resource)
-    func removeResrouce (deletedResource: Resource)
+    func removeResource (deletedResource: Resource)
     func deleteAllResources()
 }

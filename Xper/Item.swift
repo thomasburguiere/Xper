@@ -11,13 +11,14 @@ import Foundation
 class Item : DatasetObjectWithResources {
     var name: String
     var alterNativeName: String?
-    var resources: [Resource]
+    var resources: [Resource] = []
+    var description : Description?
 
     func addResource(addedResource: Resource) {
         resources.append(addedResource)
     }
 
-    func removeResrouce(deletedResource: Resource) {
+    func removeResource(deletedResource: Resource) {
     }
 
     func deleteAllResources() {
@@ -26,10 +27,7 @@ class Item : DatasetObjectWithResources {
 
     init(name:String){
         self.name = name
-        self.resources = []
     }
     
-    func aaa() -> String {
-        return name + alterNativeName!
-    }
+    
 }
