@@ -53,7 +53,25 @@ class QuantitativeMeasureTest: XCTestCase {
         qm.mean = 3.2
         XCTAssertEqual(qm.computedMax!, qm.mean! + 2 * qm.sd!)
     }
+    
+    func test_isFilled () {
+        let qm = QuantitativeMeasure()
+        XCTAssertFalse(qm.isFilled)
+        qm.min = 2.0
+        XCTAssertFalse(qm.isFilled)
+        qm.max = 2.5
+        XCTAssertTrue(qm.isFilled)
+    }
 
+    func test_isGreatherThan_value() {
+        let value = 1.5
+        
+        let qm = QuantitativeMeasure()
+        qm.min = 2.0
+        XCTAssertNil(qm.isGreaterThan(value, comparingIntervals: false))
+        qm.max = 4.0
+        XCTAssertTrue(qm.isGreaterThan(value, comparingIntervals: false) != nil)
+    }
   
 
 }

@@ -10,6 +10,8 @@
 		E939E5CF1C92344A001F1F93 /* QuantitativeMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939E5CE1C92344A001F1F93 /* QuantitativeMeasure.swift */; };
 		E939E5D21C923790001F1F93 /* QuantitativeMeasureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939E5D11C923790001F1F93 /* QuantitativeMeasureTest.swift */; };
 		E939E5D41C923B2C001F1F93 /* DescriptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939E5D31C923B2C001F1F93 /* DescriptionTest.swift */; };
+		E9757FB31CAFC45F004C1398 /* DescriptorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9757FB21CAFC45F004C1398 /* DescriptorNode.swift */; };
+		E9757FB51CAFC71A004C1398 /* DescriptorNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9757FB41CAFC71A004C1398 /* DescriptorNodeTest.swift */; };
 		E97CD1B81C9223BC00A7FFC1 /* Descriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1B71C9223BC00A7FFC1 /* Descriptor.swift */; };
 		E97CD1BA1C92257900A7FFC1 /* CategoricalDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1B91C92257900A7FFC1 /* CategoricalDescriptor.swift */; };
 		E97CD1BC1C9227E700A7FFC1 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1BB1C9227E700A7FFC1 /* State.swift */; };
@@ -49,6 +51,8 @@
 		E939E5CE1C92344A001F1F93 /* QuantitativeMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantitativeMeasure.swift; sourceTree = "<group>"; };
 		E939E5D11C923790001F1F93 /* QuantitativeMeasureTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantitativeMeasureTest.swift; sourceTree = "<group>"; };
 		E939E5D31C923B2C001F1F93 /* DescriptionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTest.swift; sourceTree = "<group>"; };
+		E9757FB21CAFC45F004C1398 /* DescriptorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorNode.swift; sourceTree = "<group>"; };
+		E9757FB41CAFC71A004C1398 /* DescriptorNodeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorNodeTest.swift; sourceTree = "<group>"; };
 		E97CD1B71C9223BC00A7FFC1 /* Descriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Descriptor.swift; sourceTree = "<group>"; };
 		E97CD1B91C92257900A7FFC1 /* CategoricalDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoricalDescriptor.swift; sourceTree = "<group>"; };
 		E97CD1BB1C9227E700A7FFC1 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				E9ECC4B81C9218A9002833FF /* Item.swift */,
 				E9ECC4BA1C9219A0002833FF /* DatasetObjectWithResources.swift */,
 				E97CD1B71C9223BC00A7FFC1 /* Descriptor.swift */,
+				E9757FB21CAFC45F004C1398 /* DescriptorNode.swift */,
 				E97CD1B91C92257900A7FFC1 /* CategoricalDescriptor.swift */,
 				E97CD1BD1C92286900A7FFC1 /* Description.swift */,
 				E97CD1BF1C922CBB00A7FFC1 /* DescriptionElementState.swift */,
@@ -181,6 +186,7 @@
 			children = (
 				E939E5D11C923790001F1F93 /* QuantitativeMeasureTest.swift */,
 				E939E5D31C923B2C001F1F93 /* DescriptionTest.swift */,
+				E9757FB41CAFC71A004C1398 /* DescriptorNodeTest.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				E97CD1BE1C92286900A7FFC1 /* Description.swift in Sources */,
 				E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */,
 				E97CD1BC1C9227E700A7FFC1 /* State.swift in Sources */,
+				E9757FB31CAFC45F004C1398 /* DescriptorNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9757FB51CAFC71A004C1398 /* DescriptorNodeTest.swift in Sources */,
 				E939E5D41C923B2C001F1F93 /* DescriptionTest.swift in Sources */,
 				E939E5D21C923790001F1F93 /* QuantitativeMeasureTest.swift in Sources */,
 				E9ECC49F1C921864002833FF /* XperTests.swift in Sources */,
