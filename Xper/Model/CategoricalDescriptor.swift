@@ -9,5 +9,15 @@
 import Foundation
 
 class CategoricalDescriptor : Descriptor {
-    var states : [State] = []
+    var states : [State]
+    
+    override init(name:String) {
+        states = []
+        super.init(name: name)
+    }
+    
+    init(name: String, states: [State]){
+        self.states = states
+        super.init(name: name)
+    }
 }

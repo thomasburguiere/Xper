@@ -72,6 +72,14 @@ class QuantitativeMeasureTest: XCTestCase {
         qm.max = 4.0
         XCTAssertTrue(qm.isGreaterThan(value, comparingIntervals: false) != nil)
     }
+    
+    func test_contains_returns_false_if_other_is_nil () {
+        let qm = QuantitativeMeasure()
+        qm.min = 2.0
+        qm.max = 4.0
+        
+        XCTAssertFalse(qm.contains(nil))
+    }
   
 
 }
