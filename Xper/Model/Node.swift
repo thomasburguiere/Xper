@@ -1,5 +1,5 @@
 //
-//  ItemNode.swift
+//  File.swift
 //  Xper
 //
 //  Created by Thomas Burguiere on 03/04/16.
@@ -8,38 +8,38 @@
 
 import Foundation
 
-class ItemNode {
-    var item: Item?
+class Node<T> {
+    var object: T?
     var name: String?
     var detail: String?
-    var tree: ItemTree?
+    var tree: Tree<T>?
     
-    private var parentNode: ItemNode?
-    private var childNodes: [ItemNode] = []
     
-    init(item: Item) {
-        self.item = item
+    private var parentNode: Node<T>?
+    private var childNodes: [Node<T>] = []
+    
+    init(object: T) {
+        self.object = object
     }
     
-    func getParentNode() -> ItemNode? {
+    func getParentNode() -> Node<T>? {
         return self.parentNode
     }
     
-    func setParentNode(parentNode: ItemNode) {
+    func setParentNode(parentNode: Node<T>) {
         self.parentNode = parentNode;
         parentNode.childNodes.append(self);
         
     }
     
-    func getChildNodes() -> [ItemNode] {
+    func getChildNodes() -> [Node<T>] {
         return self.childNodes
     }
     
-    func setChildNodes(childNodes:[ItemNode]) {
+    func setChildNodes(childNodes:[Node<T>]) {
         for childNode in  childNodes {
             childNode.setParentNode(self);
         }
         self.childNodes = childNodes;
     }
- 
 }

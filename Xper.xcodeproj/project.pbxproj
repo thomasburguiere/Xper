@@ -10,20 +10,17 @@
 		E939E5CF1C92344A001F1F93 /* QuantitativeMeasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939E5CE1C92344A001F1F93 /* QuantitativeMeasure.swift */; };
 		E939E5D21C923790001F1F93 /* QuantitativeMeasureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939E5D11C923790001F1F93 /* QuantitativeMeasureTest.swift */; };
 		E939E5D41C923B2C001F1F93 /* DescriptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E939E5D31C923B2C001F1F93 /* DescriptionTest.swift */; };
-		E9757FB31CAFC45F004C1398 /* DescriptorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9757FB21CAFC45F004C1398 /* DescriptorNode.swift */; };
-		E9757FB51CAFC71A004C1398 /* DescriptorNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9757FB41CAFC71A004C1398 /* DescriptorNodeTest.swift */; };
 		E97CD1B81C9223BC00A7FFC1 /* Descriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1B71C9223BC00A7FFC1 /* Descriptor.swift */; };
 		E97CD1BA1C92257900A7FFC1 /* CategoricalDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1B91C92257900A7FFC1 /* CategoricalDescriptor.swift */; };
 		E97CD1BC1C9227E700A7FFC1 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1BB1C9227E700A7FFC1 /* State.swift */; };
 		E97CD1BE1C92286900A7FFC1 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1BD1C92286900A7FFC1 /* Description.swift */; };
 		E97CD1C01C922CBB00A7FFC1 /* DescriptionElementState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1BF1C922CBB00A7FFC1 /* DescriptionElementState.swift */; };
 		E97CD1C31C922EE900A7FFC1 /* QuantitativeDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97CD1C21C922EE900A7FFC1 /* QuantitativeDescriptor.swift */; };
-		E993C8681CB1207E00A9A0BE /* DescriptorTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993C8671CB1207E00A9A0BE /* DescriptorTree.swift */; };
-		E993C86B1CB1232700A9A0BE /* DescriptorTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993C86A1CB1232700A9A0BE /* DescriptorTreeTest.swift */; };
-		E9DDC29F1CB13FEE001DF145 /* ItemNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDC29E1CB13FEE001DF145 /* ItemNode.swift */; };
-		E9DDC2A11CB140DF001DF145 /* ItemNodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDC2A01CB140DF001DF145 /* ItemNodeTest.swift */; };
-		E9DDC2A31CB1419D001DF145 /* ItemTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDC2A21CB1419D001DF145 /* ItemTree.swift */; };
-		E9DDC2A51CB14219001DF145 /* ItemTreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDC2A41CB14219001DF145 /* ItemTreeTest.swift */; };
+		E97DB8641CB14544007F7C83 /* NodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97DB8631CB14544007F7C83 /* NodeTest.swift */; };
+		E97DB8661CB14662007F7C83 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97DB8651CB14662007F7C83 /* Tree.swift */; };
+		E97DB8681CB146D4007F7C83 /* TreeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97DB8671CB146D4007F7C83 /* TreeType.swift */; };
+		E97DB86A1CB1475C007F7C83 /* TreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97DB8691CB1475C007F7C83 /* TreeTest.swift */; };
+		E9DDC2A71CB1446E001DF145 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDC2A61CB1446E001DF145 /* Node.swift */; };
 		E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4891C921864002833FF /* AppDelegate.swift */; };
 		E9ECC48C1C921864002833FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC48B1C921864002833FF /* ViewController.swift */; };
 		E9ECC48F1C921864002833FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ECC48D1C921864002833FF /* Main.storyboard */; };
@@ -57,20 +54,17 @@
 		E939E5CE1C92344A001F1F93 /* QuantitativeMeasure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantitativeMeasure.swift; sourceTree = "<group>"; };
 		E939E5D11C923790001F1F93 /* QuantitativeMeasureTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantitativeMeasureTest.swift; sourceTree = "<group>"; };
 		E939E5D31C923B2C001F1F93 /* DescriptionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTest.swift; sourceTree = "<group>"; };
-		E9757FB21CAFC45F004C1398 /* DescriptorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorNode.swift; sourceTree = "<group>"; };
-		E9757FB41CAFC71A004C1398 /* DescriptorNodeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorNodeTest.swift; sourceTree = "<group>"; };
 		E97CD1B71C9223BC00A7FFC1 /* Descriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Descriptor.swift; sourceTree = "<group>"; };
 		E97CD1B91C92257900A7FFC1 /* CategoricalDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoricalDescriptor.swift; sourceTree = "<group>"; };
 		E97CD1BB1C9227E700A7FFC1 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		E97CD1BD1C92286900A7FFC1 /* Description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 		E97CD1BF1C922CBB00A7FFC1 /* DescriptionElementState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionElementState.swift; sourceTree = "<group>"; };
 		E97CD1C21C922EE900A7FFC1 /* QuantitativeDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantitativeDescriptor.swift; sourceTree = "<group>"; };
-		E993C8671CB1207E00A9A0BE /* DescriptorTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorTree.swift; sourceTree = "<group>"; };
-		E993C86A1CB1232700A9A0BE /* DescriptorTreeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorTreeTest.swift; sourceTree = "<group>"; };
-		E9DDC29E1CB13FEE001DF145 /* ItemNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNode.swift; sourceTree = "<group>"; };
-		E9DDC2A01CB140DF001DF145 /* ItemNodeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNodeTest.swift; sourceTree = "<group>"; };
-		E9DDC2A21CB1419D001DF145 /* ItemTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTree.swift; sourceTree = "<group>"; };
-		E9DDC2A41CB14219001DF145 /* ItemTreeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTreeTest.swift; sourceTree = "<group>"; };
+		E97DB8631CB14544007F7C83 /* NodeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeTest.swift; sourceTree = "<group>"; };
+		E97DB8651CB14662007F7C83 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		E97DB8671CB146D4007F7C83 /* TreeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeType.swift; sourceTree = "<group>"; };
+		E97DB8691CB1475C007F7C83 /* TreeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTest.swift; sourceTree = "<group>"; };
+		E9DDC2A61CB1446E001DF145 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		E9ECC4861C921863002833FF /* Xper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9ECC4891C921864002833FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9ECC48B1C921864002833FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,14 +178,13 @@
 				E97CD1B71C9223BC00A7FFC1 /* Descriptor.swift */,
 				E97CD1B91C92257900A7FFC1 /* CategoricalDescriptor.swift */,
 				E97CD1C21C922EE900A7FFC1 /* QuantitativeDescriptor.swift */,
-				E9757FB21CAFC45F004C1398 /* DescriptorNode.swift */,
-				E993C8671CB1207E00A9A0BE /* DescriptorTree.swift */,
 				E9ECC4B81C9218A9002833FF /* Item.swift */,
-				E9DDC29E1CB13FEE001DF145 /* ItemNode.swift */,
-				E9DDC2A21CB1419D001DF145 /* ItemTree.swift */,
 				E939E5CE1C92344A001F1F93 /* QuantitativeMeasure.swift */,
 				E9ECC4BC1C921A0D002833FF /* Resource.swift */,
 				E97CD1BB1C9227E700A7FFC1 /* State.swift */,
+				E9DDC2A61CB1446E001DF145 /* Node.swift */,
+				E97DB8651CB14662007F7C83 /* Tree.swift */,
+				E97DB8671CB146D4007F7C83 /* TreeType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,11 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				E939E5D31C923B2C001F1F93 /* DescriptionTest.swift */,
-				E9757FB41CAFC71A004C1398 /* DescriptorNodeTest.swift */,
-				E9DDC2A01CB140DF001DF145 /* ItemNodeTest.swift */,
-				E9DDC2A41CB14219001DF145 /* ItemTreeTest.swift */,
+				E97DB8631CB14544007F7C83 /* NodeTest.swift */,
+				E97DB8691CB1475C007F7C83 /* TreeTest.swift */,
 				E939E5D11C923790001F1F93 /* QuantitativeMeasureTest.swift */,
-				E993C86A1CB1232700A9A0BE /* DescriptorTreeTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,19 +337,18 @@
 				E9ECC48C1C921864002833FF /* ViewController.swift in Sources */,
 				E9ECC4B91C9218A9002833FF /* Item.swift in Sources */,
 				E97CD1B81C9223BC00A7FFC1 /* Descriptor.swift in Sources */,
+				E97DB8661CB14662007F7C83 /* Tree.swift in Sources */,
 				E97CD1C01C922CBB00A7FFC1 /* DescriptionElementState.swift in Sources */,
 				E9ECC4BB1C9219A0002833FF /* DatasetObjectWithResources.swift in Sources */,
 				E939E5CF1C92344A001F1F93 /* QuantitativeMeasure.swift in Sources */,
-				E9DDC29F1CB13FEE001DF145 /* ItemNode.swift in Sources */,
-				E993C8681CB1207E00A9A0BE /* DescriptorTree.swift in Sources */,
-				E9DDC2A31CB1419D001DF145 /* ItemTree.swift in Sources */,
 				E97CD1BA1C92257900A7FFC1 /* CategoricalDescriptor.swift in Sources */,
 				E97CD1C31C922EE900A7FFC1 /* QuantitativeDescriptor.swift in Sources */,
+				E9DDC2A71CB1446E001DF145 /* Node.swift in Sources */,
 				E9ECC4BD1C921A0D002833FF /* Resource.swift in Sources */,
 				E97CD1BE1C92286900A7FFC1 /* Description.swift in Sources */,
 				E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */,
+				E97DB8681CB146D4007F7C83 /* TreeType.swift in Sources */,
 				E97CD1BC1C9227E700A7FFC1 /* State.swift in Sources */,
-				E9757FB31CAFC45F004C1398 /* DescriptorNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,13 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9757FB51CAFC71A004C1398 /* DescriptorNodeTest.swift in Sources */,
-				E993C86B1CB1232700A9A0BE /* DescriptorTreeTest.swift in Sources */,
-				E9DDC2A11CB140DF001DF145 /* ItemNodeTest.swift in Sources */,
 				E939E5D41C923B2C001F1F93 /* DescriptionTest.swift in Sources */,
 				E939E5D21C923790001F1F93 /* QuantitativeMeasureTest.swift in Sources */,
 				E9ECC49F1C921864002833FF /* XperTests.swift in Sources */,
-				E9DDC2A51CB14219001DF145 /* ItemTreeTest.swift in Sources */,
+				E97DB86A1CB1475C007F7C83 /* TreeTest.swift in Sources */,
+				E97DB8641CB14544007F7C83 /* NodeTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

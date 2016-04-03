@@ -1,5 +1,5 @@
 //
-//  DescriptorTree.swift
+//  Tree.swift
 //  Xper
 //
 //  Created by Thomas Burguiere on 03/04/16.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-class DescriptorTree {
+class Tree<T> {
     
     var name: String?
     var detail: String?
-    var type: Type = Type.Other
-    var nodes: [DescriptorNode] = []
+    var type: TreeType = .Other
+    var nodes: [Node<T>] = []
     
-    func getRootNodes() -> [DescriptorNode] {
-        var rootNodes = [DescriptorNode]()
+    func getRootNodes() -> [Node<T>] {
+        var rootNodes = [Node<T>]()
         for node in nodes {
             if node.getParentNode() == nil {
                 rootNodes.append(node)
@@ -25,16 +25,9 @@ class DescriptorTree {
         return rootNodes
     }
     
-    func addNode(node: DescriptorNode) {
+    func addNode(node: Node<T>) {
         nodes.append(node)
         node.tree = self
     }
     
-    enum Type {
-        case Other
-        case Dependency
-        case Group
-    }
 }
-
-
