@@ -22,6 +22,7 @@ class Tree<T: Treeable> {
                 rootNodes.append(node)
             }
         }
+        
         return rootNodes
     }
     
@@ -30,4 +31,14 @@ class Tree<T: Treeable> {
         node.tree = self
     }
     
+    func addNodes(nodes: [Node<T>]) {
+        for node in nodes {
+            addNode(node)
+        }
+    }
+    
+    func removeNode(nodeToRemove: Node<T>) {
+        nodes = nodes.filter({$0 !== nodeToRemove})
+        nodeToRemove.tree = nil
+    }
 }
