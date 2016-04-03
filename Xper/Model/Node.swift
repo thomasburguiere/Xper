@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Node.swift
 //  Xper
 //
 //  Created by Thomas Burguiere on 03/04/16.
