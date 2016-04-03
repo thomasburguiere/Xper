@@ -82,6 +82,35 @@ class TreeTest: XCTestCase {
         XCTAssertNotNil(itemNode12.tree)
         
     }
+    func test_removeNodes_works() {
+        let item1 = Item(name: "item1")
+        let itemNode1 = Node<Item>(object: item1)
+        
+        
+        let item11 = Item(name: "item11")
+        let item12 = Item(name: "item12")
+        let itemNode11 = Node<Item>(object: item11)
+        let itemNode12 = Node<Item>(object: item12)
+        
+        itemNode1.setChildNodes([itemNode11, itemNode12])
+        
+        let itemT = Tree<Item>()
+        itemT.addNodes([itemNode11, itemNode1, itemNode12])
+        
+        
+        XCTAssertEqual(itemT.nodes.count, 3)
+        XCTAssertNotNil(itemNode1.tree)
+        XCTAssertNotNil(itemNode11.tree)
+        XCTAssertNotNil(itemNode12.tree)
+        
+        itemT.removeNodes([itemNode11, itemNode1])
+        
+        XCTAssertEqual(itemT.nodes.count, 1)
+        XCTAssertNil(itemNode1.tree)
+        XCTAssertNil(itemNode11.tree)
+        XCTAssertNotNil(itemNode12.tree)
+        XCTAssertTrue(itemT.nodes[0] === itemNode12)
+    }
     
     func test_getRootNodes_for_Descriptor() {
         let item1 = Descriptor(name: "item1")

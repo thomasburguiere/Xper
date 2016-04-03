@@ -41,4 +41,10 @@ class Tree<T: Treeable> {
         nodes = nodes.filter({$0 !== nodeToRemove})
         nodeToRemove.tree = nil
     }
+    
+    func removeNodes(nodesToRemove: [Node<T>]) {
+        for nodeToRemove in nodesToRemove {
+            removeNode(nodeToRemove)
+        }
+    }
 }
