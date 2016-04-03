@@ -10,26 +10,13 @@ import Foundation
 
 class DescriptorNode {
     var descriptor: Descriptor
+    var tree: DescriptorTree?
     var name: String?
     var detail: String?
     
-    // TODO something is wrong here (cf unit test)
-    var parentNode: DescriptorNode? {
-        didSet {
-            if (parentNode?.childNodes == nil) {
-                parentNode?.childNodes = []
-            }
-            parentNode!.childNodes.append(self)
-        }
-    }
-    // TODO something is wrong here (cf unit test)
-    var childNodes: [DescriptorNode] = [] {
-        willSet {
-            for childNode in childNodes {
-                childNode.parentNode = self
-            }
-        }
-    }
+    private var parentNode: DescriptorNode?
+    private var childNodes: [DescriptorNode] = []
+    
     var inapplicableStates: [State]?
     var resources: [Resource]?
     
@@ -37,6 +24,27 @@ class DescriptorNode {
         self.descriptor = descriptor
         self.inapplicableStates = []
         self.resources = []
+    }
+    
+    func getParentNode() -> DescriptorNode? {
+        return self.parentNode
+    }
+    
+    func setParentNode(parentNode: DescriptorNode) {
+        self.parentNode = parentNode;
+        parentNode.childNodes.append(self);
+        
+    }
+    
+    func getChildNodes() -> [DescriptorNode] {
+        return self.childNodes
+    }
+    
+    func setChildNodes(childNodes:[DescriptorNode]) {
+        for childNode in  childNodes {
+            childNode.setParentNode(self);
+        }
+        self.childNodes = childNodes;
     }
     
     func addChildNode(childNode:DescriptorNode) {

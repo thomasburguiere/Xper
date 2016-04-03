@@ -1,8 +1,8 @@
 //
-//  DescriptorNodeTest.swift
+//  DescriptorTreeTest.swift
 //  Xper
 //
-//  Created by Thomas Burguiere on 02/04/16.
+//  Created by Thomas Burguiere on 03/04/16.
 //  Copyright © 2016 Thomas Burguiere. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import Foundation
 import XCTest
 @testable import Xper
 
-class DescriptorNodeTest: XCTestCase {
+class DescriptorTreeTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,7 +22,7 @@ class DescriptorNodeTest: XCTestCase {
         super.tearDown()
     }
     
-    func test_childNodes_didSet() {
+    func test_getRootNodes() {
         let desc1 = Descriptor(name: "desc1")
         let descNode1 = DescriptorNode(descriptor: desc1)
         
@@ -34,19 +34,12 @@ class DescriptorNodeTest: XCTestCase {
         
         descNode1.setChildNodes([descNode11, descNode12])
         
-        XCTAssertTrue(descNode1 === descNode11.getParentNode()!)
-        XCTAssertTrue(descNode1 === descNode12.getParentNode()!)
+        let descT = DescriptorTree()
+        descT.nodes = [descNode11, descNode1, descNode12]
+        
+        XCTAssertTrue(descT.getRootNodes().count == 1)
+        XCTAssertTrue(descT.getRootNodes()[0] === descNode1)
     }
+
     
-    func test_parentNode_didSet() {
-        let desc1 = Descriptor(name: "desc1")
-        let descNode1 = DescriptorNode(descriptor: desc1)
-        
-        let desc11 = Descriptor(name: "desc11")
-        let descNode11 = DescriptorNode(descriptor: desc11)
-        
-        descNode11.setParentNode(descNode1)
-        
-        XCTAssertTrue(descNode1.getChildNodes()[0] === descNode11)
-    }
 }
