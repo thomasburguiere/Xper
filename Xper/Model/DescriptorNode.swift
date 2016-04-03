@@ -13,15 +13,19 @@ class DescriptorNode {
     var name: String?
     var detail: String?
     
-    
+    // TODO something is wrong here (cf unit test)
     var parentNode: DescriptorNode? {
         didSet {
+            if (parentNode?.childNodes == nil) {
+                parentNode?.childNodes = []
+            }
             parentNode!.childNodes.append(self)
         }
     }
+    // TODO something is wrong here (cf unit test)
     var childNodes: [DescriptorNode] = [] {
-        didSet {
-            for childNode in self.childNodes {
+        willSet {
+            for childNode in childNodes {
                 childNode.parentNode = self
             }
         }
