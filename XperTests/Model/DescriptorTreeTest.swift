@@ -41,5 +41,14 @@ class DescriptorTreeTest: XCTestCase {
         XCTAssertTrue(descT.getRootNodes()[0] === descNode1)
     }
 
-    
+    func test_addNode_sets_the_nodes_tree () {
+        let desc1 = Descriptor(name: "desc1")
+        let descNode1 = DescriptorNode(descriptor: desc1)
+        
+        let descT = DescriptorTree()
+        descT.addNode(descNode1)
+        
+        XCTAssertTrue(descNode1.tree! === descT)
+        
+    }
 }
