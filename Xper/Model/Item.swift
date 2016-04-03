@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Item : DatasetObjectWithResources {
+class Item : DatasetObjectWithResources, Treeable {
     var name: String
     var alterNativeName: String?
     var resources: [Resource] = []

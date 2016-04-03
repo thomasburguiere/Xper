@@ -11,7 +11,7 @@ import Foundation
 func ==(lhs: Descriptor, rhs: Descriptor) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
-class Descriptor: Hashable {
+class Descriptor: Hashable, Treeable {
     
     var name: String
     var quality: String?

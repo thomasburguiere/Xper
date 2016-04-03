@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Tree<T> {
+class Tree<T: Treeable> {
     
     var name: String?
     var detail: String?
