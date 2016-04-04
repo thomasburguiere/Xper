@@ -38,8 +38,8 @@ class TreeTest: XCTestCase {
         let itemT = Tree<Item>()
         itemT.nodes = [itemNode11, itemNode1, itemNode12]
         
-        XCTAssertTrue(itemT.getRootNodes().count == 1)
-        XCTAssertTrue(itemT.getRootNodes()[0] === itemNode1)
+        XCTAssertTrue(itemT.rootNodes.count == 1)
+        XCTAssertTrue(itemT.rootNodes[0] === itemNode1)
     }
     
     func test_addNode_sets_the_nodes_tree_for_Item() {
@@ -127,8 +127,8 @@ class TreeTest: XCTestCase {
         let itemT = Tree<Descriptor>()
         itemT.nodes = [itemNode11, itemNode1, itemNode12]
         
-        XCTAssertTrue(itemT.getRootNodes().count == 1)
-        XCTAssertTrue(itemT.getRootNodes()[0] === itemNode1)
+        XCTAssertTrue(itemT.rootNodes.count == 1)
+        XCTAssertTrue(itemT.rootNodes[0] === itemNode1)
     }
     
     func test_addNode_sets_the_nodes_tree_for_Descriptor() {
