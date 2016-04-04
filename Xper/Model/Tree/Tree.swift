@@ -15,12 +15,6 @@ class Tree<T: Treeable> {
     var type: TreeType = .Other
     var nodes: [Node<T>] = []
     
-    func getRootNodes() -> [Node<T>] {
-        return nodes.filter({ (node: Node<T>) -> Bool in
-            return node.getParentNode() == nil
-        })
-    }
-    
     var rootNodes: [Node<T>] {
         return nodes.filter({ (node: Node<T>) -> Bool in
             return node.getParentNode() == nil
