@@ -11,12 +11,16 @@ import Foundation
 func ==(lhs: Descriptor, rhs: Descriptor) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
-class Descriptor: Hashable, Treeable {
+class Descriptor: Hashable, Treeable, CustomStringConvertible {
     
     var name: String
     var quality: String?
     var detail: String?
     var globalWeight: Int = 3
+    
+    var description: String {
+        return name
+    }
     
     init(name:String) {
         self.name = name
