@@ -21,6 +21,12 @@ class Tree<T: Treeable> {
         })
     }
     
+    var rootNodes: [Node<T>] {
+        return nodes.filter({ (node: Node<T>) -> Bool in
+            return node.getParentNode() == nil
+        })
+    }
+    
     func addNode(node: Node<T>) {
         nodes.append(node)
         node.tree = self
