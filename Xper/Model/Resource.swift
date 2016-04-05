@@ -13,6 +13,7 @@ class Resource {
     var type: Type
     var url: NSURL?
     var thumbnail: UIImage?
+    var object: DatasetObjectWithResources?
     
     init(name:String) {
         self.name = name

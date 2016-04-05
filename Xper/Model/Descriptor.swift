@@ -11,7 +11,7 @@ import Foundation
 func ==(lhs: Descriptor, rhs: Descriptor) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
-class Descriptor: Hashable, Treeable, CustomStringConvertible {
+class Descriptor: DatasetObjectWithResources, Hashable, Treeable, CustomStringConvertible {
     
     var name: String
     var quality: String?
@@ -32,6 +32,8 @@ class Descriptor: Hashable, Treeable, CustomStringConvertible {
             return "\(self.name)".hashValue
         }
     }
+    
+   
     
     
     enum Type {

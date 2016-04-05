@@ -8,9 +8,28 @@
 
 import Foundation
 
-protocol DatasetObjectWithResources {
-    var resources: [Resource] {get set}
-    func addResource (addedResource: Resource)
-    func removeResource (deletedResource: Resource)
-    func deleteAllResources()
+class DatasetObjectWithResources {
+    var resources: [Resource]  = []
+    func addResource(addedResource: Resource) {
+        resources.append(addedResource)
+        addedResource.object = self
+    }
+    
+    func removeResource(deletedResource: Resource) {
+        resources = resources.filter({ (resource: Resource) -> Bool in
+            if(resource === deletedResource){
+                deletedResource.object = nil
+                return false
+            } else {
+                return true
+            }
+        })
+    }
+    
+    func deleteAllResources() {
+        for resource in resources {
+            resource.object = nil
+        }
+        resources = []
+    }
 }

@@ -21,6 +21,7 @@
 		E97DB8661CB14662007F7C83 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97DB8651CB14662007F7C83 /* Tree.swift */; };
 		E97DB8681CB146D4007F7C83 /* TreeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97DB8671CB146D4007F7C83 /* TreeType.swift */; };
 		E97DB86A1CB1475C007F7C83 /* TreeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97DB8691CB1475C007F7C83 /* TreeTest.swift */; };
+		E9AA9C051CB3891C00C9B729 /* DatasetObjectWithResourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA9C041CB3891C00C9B729 /* DatasetObjectWithResourceTest.swift */; };
 		E9D468081CB17A9B000C121D /* Treeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D468071CB17A9B000C121D /* Treeable.swift */; };
 		E9DDC2A71CB1446E001DF145 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DDC2A61CB1446E001DF145 /* Node.swift */; };
 		E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4891C921864002833FF /* AppDelegate.swift */; };
@@ -67,6 +68,7 @@
 		E97DB8651CB14662007F7C83 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		E97DB8671CB146D4007F7C83 /* TreeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeType.swift; sourceTree = "<group>"; };
 		E97DB8691CB1475C007F7C83 /* TreeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeTest.swift; sourceTree = "<group>"; };
+		E9AA9C041CB3891C00C9B729 /* DatasetObjectWithResourceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetObjectWithResourceTest.swift; sourceTree = "<group>"; };
 		E9D468071CB17A9B000C121D /* Treeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Treeable.swift; sourceTree = "<group>"; };
 		E9DDC2A61CB1446E001DF145 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		E9ECC4861C921863002833FF /* Xper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +220,7 @@
 				E9D4680A1CB17C21000C121D /* Tree */,
 				E939E5D31C923B2C001F1F93 /* DescriptionTest.swift */,
 				E939E5D11C923790001F1F93 /* QuantitativeMeasureTest.swift */,
+				E9AA9C041CB3891C00C9B729 /* DatasetObjectWithResourceTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				E9ECC49F1C921864002833FF /* XperTests.swift in Sources */,
 				E97DB86A1CB1475C007F7C83 /* TreeTest.swift in Sources */,
 				E97DB8641CB14544007F7C83 /* NodeTest.swift in Sources */,
+				E9AA9C051CB3891C00C9B729 /* DatasetObjectWithResourceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
