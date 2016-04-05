@@ -197,17 +197,17 @@
 			isa = PBXGroup;
 			children = (
 				E9D468091CB17BDD000C121D /* Tree */,
-				E97CD1B91C92257900A7FFC1 /* CategoricalDescriptor.swift */,
-				E9ECC4BA1C9219A0002833FF /* DatasetObjectWithResources.swift */,
-				E97CD1BD1C92286900A7FFC1 /* Description.swift */,
 				E95405F11CB3361300299BD4 /* Dataset.swift */,
-				E97CD1BF1C922CBB00A7FFC1 /* DescriptionElementState.swift */,
+				E9ECC4BA1C9219A0002833FF /* DatasetObjectWithResources.swift */,
 				E97CD1B71C9223BC00A7FFC1 /* Descriptor.swift */,
-				E9ECC4B81C9218A9002833FF /* Item.swift */,
+				E97CD1B91C92257900A7FFC1 /* CategoricalDescriptor.swift */,
+				E97CD1BB1C9227E700A7FFC1 /* State.swift */,
 				E97CD1C21C922EE900A7FFC1 /* QuantitativeDescriptor.swift */,
 				E939E5CE1C92344A001F1F93 /* QuantitativeMeasure.swift */,
+				E97CD1BD1C92286900A7FFC1 /* Description.swift */,
+				E97CD1BF1C922CBB00A7FFC1 /* DescriptionElementState.swift */,
+				E9ECC4B81C9218A9002833FF /* Item.swift */,
 				E9ECC4BC1C921A0D002833FF /* Resource.swift */,
-				E97CD1BB1C9227E700A7FFC1 /* State.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
