@@ -33,7 +33,9 @@ class Tree<T: Treeable> {
     }
     
     func removeNode(nodeToRemove: Node<T>) {
-        nodes = nodes.filter({$0 !== nodeToRemove})
+        nodes = nodes.filter({(node: Node<T>) -> Bool in
+            return node !== nodeToRemove
+        })
         nodeToRemove.tree = nil
     }
     
