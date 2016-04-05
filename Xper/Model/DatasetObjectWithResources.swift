@@ -12,9 +12,16 @@ protocol DatasetObjectWithResources {
     var resources: [Resource]  {get set}
 }
 extension DatasetObjectWithResources {
-    mutating func addResource(addedResource: Resource) {
-        resources.append(addedResource)
-        addedResource.object = self
+    mutating func addResource(resourcesToAdd: Resource) {
+        resources.append(resourcesToAdd)
+        resourcesToAdd.object = self
+    }
+    
+    
+    mutating func addResources(addedResources: [Resource]) {
+        for resource in addedResources {
+            addResource(resource)
+        }
     }
     
     mutating func removeResource(deletedResource: Resource) {
@@ -34,4 +41,5 @@ extension DatasetObjectWithResources {
         }
         resources = []
     }
+    
 }

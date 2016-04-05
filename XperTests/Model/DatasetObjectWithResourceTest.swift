@@ -30,8 +30,21 @@ class DatasetObjectWithResourceTest: XCTestCase {
         XCTAssertNotNil(r.object)
         XCTAssertTrue(r.object! is Descriptor)
         XCTAssertTrue(r.object! as! Descriptor === d)
+    }
+    
+    func test_addResources() {
+        var d = Descriptor(name:"d1")
+        let r1 = Resource(name: "r1")
+        let r2 = Resource(name: "r2")
+        d.addResources([r1, r2])
         
+        XCTAssertTrue(r1.object != nil)
+        XCTAssertTrue(r1.object! is Descriptor)
+        XCTAssertTrue(r1.object! as! Descriptor === d)
         
+        XCTAssertNotNil(r2.object)
+        XCTAssertTrue(r2.object! is Descriptor)
+        XCTAssertTrue(r2.object! as! Descriptor === d)
     }
     
     func test_removeResource_removes_resource_if_it_was_found() {
