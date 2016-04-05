@@ -12,7 +12,7 @@ protocol DatasetObjectWithResources {
     var resources: [Resource]  {get set}
 }
 extension DatasetObjectWithResources {
-   mutating func addResource(addedResource: Resource) {
+    mutating func addResource(addedResource: Resource) {
         resources.append(addedResource)
         addedResource.object = self
     }
@@ -28,7 +28,7 @@ extension DatasetObjectWithResources {
         })
     }
     
-    mutating func deleteAllResources() {
+    mutating func removeAllResources() {
         for resource in resources {
             resource.object = nil
         }

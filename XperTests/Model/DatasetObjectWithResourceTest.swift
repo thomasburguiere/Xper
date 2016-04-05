@@ -22,12 +22,59 @@ class DatasetObjectWithResourceTest: XCTestCase {
         super.tearDown()
     }
     
-    func test_that_computedMin_equals_min_if_defined() {
-        let qm = QuantitativeMeasure()
-        qm.min = 1.5
-        qm.max = 9.0
-        qm.sd = 4.3
-        qm.mean = 3.2
-        XCTAssertEqual(qm.computedMin, qm.min)
+    func test_addResource() {
+        var d = Descriptor(name:"d1")
+        let r = Resource(name: "r1")
+        d.addResource(r)
+        
+        XCTAssertNotNil(r.object)
+        XCTAssertTrue(r.object! is Descriptor)
+        XCTAssertTrue(r.object! as! Descriptor === d)
+        
+        
+    }
+    
+    func test_removeResource_removes_resource_if_it_was_found() {
+        var d = Descriptor(name:"d1")
+        let r = Resource(name: "r1")
+        d.addResource(r)
+        
+        d.removeResource(r)
+        XCTAssertNil(r.object)
+        XCTAssertTrue(d.resources.isEmpty)
+    }
+    
+    func test_removeResource_doesnt_remove_resource_if_it_was_found() {
+        //given
+        var d = Descriptor(name:"d1")
+        let r1 = Resource(name: "r1")
+        let r2 = Resource(name: "r1")
+        d.addResource(r1)
+        d.addResource(r2)
+        
+        //when
+        d.removeResource(r2)
+        
+        //then
+        XCTAssertNotNil(r1.object)
+        XCTAssertNil(r2.object)
+        XCTAssertTrue(d.resources.count == 1)
+    }
+    
+    func test_removeAllResources_works() {
+        //given
+        var d = Descriptor(name:"d1")
+        let r1 = Resource(name: "r1")
+        let r2 = Resource(name: "r1")
+        d.addResource(r1)
+        d.addResource(r2)
+        
+        //when
+        d.removeAllResources()
+        
+        //then
+        XCTAssertNil(r1.object)
+        XCTAssertNil(r2.object)
+        XCTAssertTrue(d.resources.isEmpty )
     }
 }
