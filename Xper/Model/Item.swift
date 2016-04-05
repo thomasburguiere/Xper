@@ -11,7 +11,8 @@ import Foundation
 class Item : DatasetObjectWithResources, Treeable {
     var name: String
     var alterNativeName: String?
-    var description : Description?
+    var description: Description?
+    var resources: [Resource] = []
 
     init(name:String){
         self.name = name
