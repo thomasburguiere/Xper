@@ -17,6 +17,7 @@ class Descriptor: DatasetObjectWithResources, Hashable, Treeable, CustomStringCo
     var quality: String?
     var detail: String?
     var globalWeight: Int = 3
+    var resources: [Resource] = []
     
     var description: String {
         return name
