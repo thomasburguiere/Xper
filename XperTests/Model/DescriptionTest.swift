@@ -53,9 +53,7 @@ class DescriptionTest: XCTestCase {
         qm.min = 1.0
         XCTAssertTrue(description.isDescriptionComplete())
     }
-    
-    
-    
+        
     func test_description_with_unknown_is_complete() {
         let description = Description()
         let descriptor = QuantitativeDescriptor(name:"descriptor")
