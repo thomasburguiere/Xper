@@ -1,0 +1,10 @@
+framework module XperFramework {
+  umbrella header "XperFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module XperFramework.Swift {
+    header "XperFramework-Swift.h"
+}

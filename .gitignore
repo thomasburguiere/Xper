@@ -1,2 +1,7 @@
 .idea
-Carthage
+Carthage/*
+!Carthage/Build
+Carthage/Build/*
+!Carthage/Build/iOS
+Carthage/Build/iOS/*
+!Carthage/Build/iOS/XperFramework.framework
