@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91BB29D1CCE9C5E001D82FA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E91BB29C1CCE9C5E001D82FA /* README.md */; };
 		E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4891C921864002833FF /* AppDelegate.swift */; };
 		E9ECC48C1C921864002833FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC48B1C921864002833FF /* ViewController.swift */; };
 		E9ECC48F1C921864002833FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ECC48D1C921864002833FF /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E91BB29C1CCE9C5E001D82FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E93DAD361CCD698600F72E92 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E93DAD371CCD698600F72E92 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		E9ECC4861C921863002833FF /* Xper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E93DAD361CCD698600F72E92 /* Cartfile */,
+				E91BB29C1CCE9C5E001D82FA /* README.md */,
 				E93DAD371CCD698600F72E92 /* Cartfile.resolved */,
 				E9ECC4871C921863002833FF /* Products */,
 				E9ECC4881C921864002833FF /* Xper */,
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9ECC48C1C921864002833FF /* ViewController.swift in Sources */,
+				E91BB29D1CCE9C5E001D82FA /* README.md in Sources */,
 				E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
