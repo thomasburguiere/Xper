@@ -18,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Descriptors count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl5-ie-mFw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Descriptors count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl5-ie-mFw">
                                 <rect key="frame" x="202" y="289" width="142" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m63-kU-ldz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m63-kU-ldz">
                                 <rect key="frame" x="352" y="289" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,7 +33,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="XuC-pm-gQt" firstAttribute="top" secondItem="Dl5-ie-mFw" secondAttribute="bottom" constant="240" id="4Sf-1s-vuY"/>
+                            <constraint firstItem="Dl5-ie-mFw" firstAttribute="top" secondItem="rMo-Nl-QZR" secondAttribute="bottom" constant="270" id="6lQ-Ba-X0j"/>
+                            <constraint firstItem="XuC-pm-gQt" firstAttribute="top" secondItem="m63-kU-ldz" secondAttribute="bottom" constant="241" id="6xP-S0-jS5"/>
                             <constraint firstItem="Dl5-ie-mFw" firstAttribute="leading" secondItem="brc-fO-pmI" secondAttribute="leadingMargin" constant="30" id="bbf-CV-1DD"/>
+                            <constraint firstItem="m63-kU-ldz" firstAttribute="top" secondItem="rMo-Nl-QZR" secondAttribute="bottom" constant="269" id="fY6-rM-wvb"/>
                             <constraint firstItem="m63-kU-ldz" firstAttribute="leading" secondItem="Dl5-ie-mFw" secondAttribute="trailing" constant="8" id="x2p-8B-GJ0"/>
                         </constraints>
                     </view>
@@ -96,13 +100,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Items count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuN-14-c7o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Items count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuN-14-c7o">
                                 <rect key="frame" x="207" y="290" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ny-fr-Qzb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ny-fr-Qzb">
                                 <rect key="frame" x="310" y="290" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,7 +116,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4ny-fr-Qzb" firstAttribute="leading" secondItem="AuN-14-c7o" secondAttribute="trailing" constant="8" id="Jhe-df-RXm"/>
+                            <constraint firstItem="AuN-14-c7o" firstAttribute="top" secondItem="tEb-VT-ZPq" secondAttribute="bottom" constant="270" id="a3z-S4-DE4"/>
+                            <constraint firstItem="8Nh-Mb-3ME" firstAttribute="top" secondItem="AuN-14-c7o" secondAttribute="bottom" constant="240" id="aWH-Gb-dXG"/>
+                            <constraint firstItem="4ny-fr-Qzb" firstAttribute="top" secondItem="tEb-VT-ZPq" secondAttribute="bottom" constant="270" id="hfD-QO-gZx"/>
                             <constraint firstItem="AuN-14-c7o" firstAttribute="leading" secondItem="WHy-cC-5At" secondAttribute="leadingMargin" constant="30" id="srA-w9-Vzq"/>
+                            <constraint firstItem="8Nh-Mb-3ME" firstAttribute="top" secondItem="4ny-fr-Qzb" secondAttribute="bottom" constant="240" id="y0H-To-NG9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" image="items" id="Ror-bR-YiY"/>
