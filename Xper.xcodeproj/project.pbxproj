@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E91BB29D1CCE9C5E001D82FA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E91BB29C1CCE9C5E001D82FA /* README.md */; };
+		E927D0C31CD675A400E658B5 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0C21CD675A400E658B5 /* ItemsViewController.swift */; };
+		E927D0C51CD6765F00E658B5 /* DescriptorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0C41CD6765F00E658B5 /* DescriptorsViewController.swift */; };
 		E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4891C921864002833FF /* AppDelegate.swift */; };
-		E9ECC48C1C921864002833FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC48B1C921864002833FF /* ViewController.swift */; };
+		E9ECC48C1C921864002833FF /* XperTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC48B1C921864002833FF /* XperTabController.swift */; };
 		E9ECC48F1C921864002833FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ECC48D1C921864002833FF /* Main.storyboard */; };
 		E9ECC4911C921864002833FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9ECC4901C921864002833FF /* Assets.xcassets */; };
 		E9ECC4941C921864002833FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ECC4921C921864002833FF /* LaunchScreen.storyboard */; };
@@ -37,11 +39,13 @@
 
 /* Begin PBXFileReference section */
 		E91BB29C1CCE9C5E001D82FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E927D0C21CD675A400E658B5 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		E927D0C41CD6765F00E658B5 /* DescriptorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorsViewController.swift; sourceTree = "<group>"; };
 		E93DAD361CCD698600F72E92 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E93DAD371CCD698600F72E92 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		E9ECC4861C921863002833FF /* Xper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9ECC4891C921864002833FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9ECC48B1C921864002833FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9ECC48B1C921864002833FF /* XperTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperTabController.swift; sourceTree = "<group>"; };
 		E9ECC48E1C921864002833FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9ECC4901C921864002833FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9ECC4931C921864002833FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,7 +125,9 @@
 				E9ECC4951C921864002833FF /* Info.plist */,
 				E9ECC4921C921864002833FF /* LaunchScreen.storyboard */,
 				E9ECC48D1C921864002833FF /* Main.storyboard */,
-				E9ECC48B1C921864002833FF /* ViewController.swift */,
+				E9ECC48B1C921864002833FF /* XperTabController.swift */,
+				E927D0C21CD675A400E658B5 /* ItemsViewController.swift */,
+				E927D0C41CD6765F00E658B5 /* DescriptorsViewController.swift */,
 			);
 			path = Xper;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9ECC48C1C921864002833FF /* ViewController.swift in Sources */,
+				E9ECC48C1C921864002833FF /* XperTabController.swift in Sources */,
+				E927D0C31CD675A400E658B5 /* ItemsViewController.swift in Sources */,
+				E927D0C51CD6765F00E658B5 /* DescriptorsViewController.swift in Sources */,
 				E91BB29D1CCE9C5E001D82FA /* README.md in Sources */,
 				E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */,
 			);
