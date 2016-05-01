@@ -33,11 +33,11 @@ class XperTabController: UITabBarController {
         dataset = parser.parseDataset(sampleFileData)
         
         if let viewControllers = self.viewControllers {
-            let itemViewController = viewControllers[0] as! ItemsViewController
+            let itemViewController = viewControllers[0] as! ItemsTableViewController
             itemViewController.items = dataset?.items
             
             
-            let descriptorViewController = viewControllers[1] as! DescriptorsViewController
+            let descriptorViewController = viewControllers[1] as! DescriptorsTableViewController
             descriptorViewController.descriptors = dataset?.descriptors
         }
     }
