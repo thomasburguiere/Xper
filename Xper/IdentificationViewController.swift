@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XperFramework
 
 class IdentificationViewController: UIViewController {
     

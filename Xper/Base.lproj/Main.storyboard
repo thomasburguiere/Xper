@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Descriptors-->
@@ -16,9 +17,30 @@
                     <view key="view" contentMode="scaleToFill" id="brc-fO-pmI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Descriptors count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl5-ie-mFw">
+                                <rect key="frame" x="202" y="289" width="142" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m63-kU-ldz">
+                                <rect key="frame" x="352" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dl5-ie-mFw" firstAttribute="leading" secondItem="brc-fO-pmI" secondAttribute="leadingMargin" constant="30" id="bbf-CV-1DD"/>
+                            <constraint firstItem="m63-kU-ldz" firstAttribute="leading" secondItem="Dl5-ie-mFw" secondAttribute="trailing" constant="8" id="x2p-8B-GJ0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Descriptors" image="descriptors" id="YrY-6R-dcS"/>
+                    <connections>
+                        <outlet property="descriptorCount" destination="m63-kU-ldz" id="tH0-Jg-1Hp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1b-Qe-REl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,9 +95,30 @@
                     <view key="view" contentMode="scaleToFill" id="WHy-cC-5At">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Items count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuN-14-c7o">
+                                <rect key="frame" x="207" y="290" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ny-fr-Qzb">
+                                <rect key="frame" x="310" y="290" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ny-fr-Qzb" firstAttribute="leading" secondItem="AuN-14-c7o" secondAttribute="trailing" constant="8" id="Jhe-df-RXm"/>
+                            <constraint firstItem="AuN-14-c7o" firstAttribute="leading" secondItem="WHy-cC-5At" secondAttribute="leadingMargin" constant="30" id="srA-w9-Vzq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Items" image="items" id="Ror-bR-YiY"/>
+                    <connections>
+                        <outlet property="itemCount" destination="4ny-fr-Qzb" id="8LR-a9-IWM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oq6-uy-hBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

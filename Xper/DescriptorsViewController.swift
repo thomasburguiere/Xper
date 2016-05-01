@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import XperFramework
 
 class DescriptorsViewController: UIViewController {
     
+    var descriptors: [Descriptor]?
+    
+    @IBOutlet weak var descriptorCount: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        descriptorCount.text = "\(descriptors!.count)"
     }
     
     override func didReceiveMemoryWarning() {
