@@ -35,11 +35,12 @@ class ItemsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell") as! ItemTableViewCell
         let item = items![indexPath.row]
-        cell?.textLabel?.text = item.name
+        cell.itemName?.text = item.name
+        cell.itemDescription.text = item.detail
         
-        return cell!
+        return cell
     }
     
 }
