@@ -9,9 +9,9 @@
 import UIKit
 import XperFramework
 
-class ItemTableViewCell: UITableViewCell {
+class DatasetObjectTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var itemName: UILabel!
-    @IBOutlet weak var itemDescription: UITextView!
-    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var objectName: UILabel!
+    @IBOutlet weak var objectDescription: UITextView!
+//    @IBOutlet weak var objectImage: UIImageView!
 }

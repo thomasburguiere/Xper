@@ -35,11 +35,12 @@ class DescriptorsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("descriptorCell")
-        let item = descriptors![indexPath.row]
-        cell?.textLabel?.text = item.name
+        let cell = tableView.dequeueReusableCellWithIdentifier("descriptorCell")as! DatasetObjectTableViewCell
+        let descriptor = descriptors![indexPath.row]
+        cell.objectName?.text = descriptor.name
+        cell.objectDescription.text = descriptor.detail
         
-        return cell!
+        return cell
     }
     
 }

@@ -35,10 +35,10 @@ class ItemsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell") as! ItemTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell") as! DatasetObjectTableViewCell
         let item = items![indexPath.row]
-        cell.itemName?.text = item.name
-        cell.itemDescription.text = item.detail
+        cell.objectName?.text = item.name
+        cell.objectDescription.text = item.detail
         
         return cell
     }
