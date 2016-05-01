@@ -27,7 +27,7 @@
         <!--Descriptions-->
         <scene sceneID="b88-vB-H94">
             <objects>
-                <viewController id="kGC-rv-CCd" sceneMemberID="viewController">
+                <viewController id="kGC-rv-CCd" customClass="DescriptionsViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V8x-SM-bOR"/>
                         <viewControllerLayoutGuide type="bottom" id="TJ5-sh-rwL"/>
@@ -46,7 +46,7 @@
         <!--Identification-->
         <scene sceneID="vGr-Ke-Xou">
             <objects>
-                <viewController id="nJC-Aq-cV6" sceneMemberID="viewController">
+                <viewController id="nJC-Aq-cV6" customClass="IdentificationViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1fl-JK-frD"/>
                         <viewControllerLayoutGuide type="bottom" id="qmo-SC-mAf"/>
