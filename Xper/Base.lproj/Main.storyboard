@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Descriptors" id="YrY-6R-dcS"/>
+                    <tabBarItem key="tabBarItem" title="Descriptors" image="descriptors" id="YrY-6R-dcS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1b-Qe-REl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Items" id="Ror-bR-YiY"/>
+                    <tabBarItem key="tabBarItem" title="Items" image="items" id="Ror-bR-YiY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oq6-uy-hBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,4 +62,8 @@
             <point key="canvasLocation" x="369" y="-386"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="descriptors" width="25" height="25"/>
+        <image name="items" width="25" height="25"/>
+    </resources>
 </document>
