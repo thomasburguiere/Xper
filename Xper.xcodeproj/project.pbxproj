@@ -16,6 +16,7 @@
 		E927D0D11CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */; };
 		E927D0D21CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */; };
 		E927D0D41CD6A17300E658B5 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D31CD6A17300E658B5 /* ItemTableViewCell.swift */; };
+		E9CC6B571CD6E04A0091B4B2 /* ItemsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */; };
 		E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4891C921864002833FF /* AppDelegate.swift */; };
 		E9ECC48C1C921864002833FF /* XperTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC48B1C921864002833FF /* XperTabController.swift */; };
 		E9ECC48F1C921864002833FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ECC48D1C921864002833FF /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		E927D0D31CD6A17300E658B5 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		E93DAD361CCD698600F72E92 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E93DAD371CCD698600F72E92 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsNavigationController.swift; sourceTree = "<group>"; };
 		E9ECC4861C921863002833FF /* Xper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9ECC4891C921864002833FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9ECC48B1C921864002833FF /* XperTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperTabController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				E9ECC4921C921864002833FF /* LaunchScreen.storyboard */,
 				E9ECC48D1C921864002833FF /* Main.storyboard */,
 				E9ECC48B1C921864002833FF /* XperTabController.swift */,
+				E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */,
 				E927D0CD1CD697E200E658B5 /* ItemsTableViewController.swift */,
 				E927D0D31CD6A17300E658B5 /* ItemTableViewCell.swift */,
 				E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */,
@@ -323,6 +326,7 @@
 				E9ECC48C1C921864002833FF /* XperTabController.swift in Sources */,
 				E927D0CE1CD697E200E658B5 /* ItemsTableViewController.swift in Sources */,
 				E927D0D41CD6A17300E658B5 /* ItemTableViewCell.swift in Sources */,
+				E9CC6B571CD6E04A0091B4B2 /* ItemsNavigationController.swift in Sources */,
 				E91BB29D1CCE9C5E001D82FA /* README.md in Sources */,
 				E927D0C91CD6830C00E658B5 /* IdentificationViewController.swift in Sources */,
 				E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */,
