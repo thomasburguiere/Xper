@@ -38,7 +38,6 @@ class ItemsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("itemCell") as! DatasetObjectTableViewCell
         let item = items![indexPath.row]
         cell.objectName?.text = item.name
-        cell.objectDescription.text = item.detail
         
         return cell
     }

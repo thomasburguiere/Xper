@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Descriptions-->
@@ -43,20 +44,20 @@
             </objects>
             <point key="canvasLocation" x="1195" y="1343"/>
         </scene>
-        <!--Items-->
+        <!--Items Table-->
         <scene sceneID="dRC-lF-nvO">
             <objects>
-                <tableViewController id="SiP-wQ-KQn" customClass="ItemsTableViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="93" sectionHeaderHeight="28" sectionFooterHeight="28" id="jB5-3d-fQP">
+                <tableViewController id="SiP-wQ-KQn" userLabel="Items Table" customClass="ItemsTableViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" id="jB5-3d-fQP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="93" id="sbH-bi-nbh" customClass="DatasetObjectTableViewCell" customModule="Xper" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="93"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="38" id="sbH-bi-nbh" customClass="DatasetObjectTableViewCell" customModule="Xper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="38"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sbH-bi-nbh" id="v74-wZ-eea">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="37"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uK-th-zZ3">
@@ -65,17 +66,9 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6gS-31-3vS">
-                                            <rect key="frame" x="8" y="37" width="584" height="47"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        </textView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="objectDescription" destination="6gS-31-3vS" id="Pdf-Ja-06k"/>
                                     <outlet property="objectName" destination="5uK-th-zZ3" id="nPN-Uo-La6"/>
                                     <segue destination="c8h-Wx-gy3" kind="show" identifier="showItemDetail" id="caa-Ix-wAJ"/>
                                 </connections>
@@ -92,13 +85,47 @@
             </objects>
             <point key="canvasLocation" x="1977" y="-712"/>
         </scene>
-        <!--Title-->
+        <!--Item Detail-->
         <scene sceneID="8Cn-qd-q0g">
             <objects>
-                <viewController id="c8h-Wx-gy3" customClass="ItemDetailViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c8h-Wx-gy3" userLabel="Item Detail" customClass="ItemDetailViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8gk-1i-fwA"/>
+                        <viewControllerLayoutGuide type="bottom" id="XKB-rp-CdN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PVH-70-h5g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IKq-t3-RsO">
+                                <rect key="frame" x="20" y="72" width="560" height="234"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IKq-t3-RsO" firstAttribute="leading" secondItem="PVH-70-h5g" secondAttribute="leadingMargin" id="SSL-dH-ORn"/>
+                            <constraint firstItem="IKq-t3-RsO" firstAttribute="trailing" secondItem="PVH-70-h5g" secondAttribute="trailingMargin" id="n8i-4p-TES"/>
+                            <constraint firstItem="IKq-t3-RsO" firstAttribute="top" secondItem="8gk-1i-fwA" secondAttribute="bottom" constant="8" id="pZB-De-b3J"/>
+                        </constraints>
+                    </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="prc-PH-VGn"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="itemDetailText" destination="IKq-t3-RsO" id="AaJ-Et-XYw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hn4-sK-eCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

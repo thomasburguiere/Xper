@@ -13,7 +13,7 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
     var item: Item?
     
     
-    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemDetailText: UITextView!
     
     @IBAction func cancel(sender: AnyObject) {
         // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
@@ -31,12 +31,18 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
         // Handle the text field’s user input through delegate callbacks.
         //        nameTextField.delegate = self
         
-        // set up views if editing existing meal
         if let item = item {
             navigationItem.title = item.name
-//            nameTextField.text = meal.name
-//            photoImageView.image = meal.photo
-//            ratingControl.rating = meal.rating
+            let detailString = item.detail
+            do {
+                let formatted = try NSAttributedString(
+                    data: (detailString?.dataUsingEncoding(NSUnicodeStringEncoding))!,
+                    options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+                    documentAttributes: nil)
+                itemDetailText.attributedText = formatted
+            } catch {
+                itemDetailText.text = detailString
+            }
         }
         
     }
