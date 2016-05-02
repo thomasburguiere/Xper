@@ -19,7 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Descriptions" image="descriptions" id="2FW-Fe-tuZ"/>
+                    <tabBarItem key="tabBarItem" title="Descriptions" image="descriptions" id="2FW-Fe-tuZ">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.56470588239999997" green="0.76862745099999996" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxH-Iu-IHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -38,7 +44,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Identification" image="identification" id="FmF-Eh-igM"/>
+                    <tabBarItem key="tabBarItem" title="Identification" image="identification" id="FmF-Eh-igM">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.56470588239999997" green="0.76862745099999996" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QN8-54-7yj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="38"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sbH-bi-nbh" id="v74-wZ-eea">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="37"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="37.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uK-th-zZ3">
@@ -135,10 +147,17 @@
         <scene sceneID="xbM-vx-bXP">
             <objects>
                 <navigationController id="eyW-bB-1rd" customClass="ItemsNavigationController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Items" image="items" id="vNy-LW-2fY"/>
+                    <tabBarItem key="tabBarItem" title="Items" image="items" id="vNy-LW-2fY">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.56470588239999997" green="0.76862745099999996" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eY5-SM-0nE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.56470588239999997" green="0.76862745099999996" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="SiP-wQ-KQn" kind="relationship" relationship="rootViewController" id="PP1-xE-gVr"/>
@@ -161,7 +180,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="93"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y9d-1u-UMX" id="vZ5-ec-4cG">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="92.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJP-XH-ZUY">
@@ -190,7 +209,13 @@
                             <outlet property="delegate" destination="Y9m-Od-2c1" id="PIg-DY-U6j"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Descriptors" image="descriptors" id="Yyn-Lf-BzF"/>
+                    <tabBarItem key="tabBarItem" title="Descriptors" image="descriptors" id="Yyn-Lf-BzF">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.56470588239999997" green="0.76862745099999996" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahc-fc-oBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
