@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="1195" y="1343"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Items-->
         <scene sceneID="dRC-lF-nvO">
             <objects>
                 <tableViewController id="SiP-wQ-KQn" customClass="ItemsTableViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uK-th-zZ3">
                                             <rect key="frame" x="8" y="8" width="584" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6gS-31-3vS">
@@ -77,6 +77,7 @@
                                 <connections>
                                     <outlet property="objectDescription" destination="6gS-31-3vS" id="Pdf-Ja-06k"/>
                                     <outlet property="objectName" destination="5uK-th-zZ3" id="nPN-Uo-La6"/>
+                                    <segue destination="c8h-Wx-gy3" kind="show" identifier="showItemDetail" id="caa-Ix-wAJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -85,11 +86,23 @@
                             <outlet property="delegate" destination="SiP-wQ-KQn" id="T4I-j0-I2R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ddA-m8-ReQ"/>
+                    <navigationItem key="navigationItem" title="Items" id="ddA-m8-ReQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwy-CQ-Xm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1977" y="-712"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="8Cn-qd-q0g">
+            <objects>
+                <viewController id="c8h-Wx-gy3" customClass="ItemDetailViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="prc-PH-VGn"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hn4-sK-eCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2733" y="-712"/>
         </scene>
         <!--Items-->
         <scene sceneID="xbM-vx-bXP">
@@ -159,7 +172,6 @@
         <!--Xper Tab Controller-->
         <scene sceneID="NzU-vK-SKI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WFe-y7-AJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="xJx-pt-CTc" customClass="XperTabController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Snx-Eg-ZJ1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -173,6 +185,7 @@
                         <segue destination="nJC-Aq-cV6" kind="relationship" relationship="viewControllers" id="Ynl-WV-CB9"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFe-y7-AJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="369" y="-386"/>
         </scene>

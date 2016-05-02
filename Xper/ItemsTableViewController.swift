@@ -43,4 +43,22 @@ class ItemsTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK Navigation setup
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showItemDetail" {
+            let itemDetailViewController = segue.destinationViewController as! ItemDetailViewController
+            
+            // Get the cell that generated this segue.
+            if let selectedItemCell = sender as? DatasetObjectTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedItemCell)
+                let selectedItem = items![(indexPath?.row)!]
+                itemDetailViewController.item = selectedItem
+            }
+        }
+        else if segue.identifier == "AddItem" {
+            print("Adding new meal.")
+        }
+    }
+    
 }
