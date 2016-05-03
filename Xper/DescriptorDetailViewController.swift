@@ -26,6 +26,7 @@ class DescriptorDetailViewController: UIViewController, UINavigationControllerDe
         }
         descriptorStatesTableView.dataSource = self
         descriptorStatesTableView.delegate = self
+        descriptorStatesTableView.tableFooterView = UIView()
     }
     
     // MARK: - Table view data source functions
