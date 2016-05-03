@@ -7,16 +7,6 @@
 //
 
 import UIKit
-import XperFramework
-
-class DatasetObjectTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var objectName: UILabel!
-    @IBOutlet weak var objectDescription: UITextView!
-//    @IBOutlet weak var objectImage: UIImageView!
-}
-
-
 
 extension UITextView {
     func setHTMLFromString(text: String) {
