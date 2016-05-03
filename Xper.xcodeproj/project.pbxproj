@@ -17,6 +17,7 @@
 		E927D0D21CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */; };
 		E927D0D41CD6A17300E658B5 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D31CD6A17300E658B5 /* ItemTableViewCell.swift */; };
 		E956ADEE1CD8385600E0E0EE /* DescriptorsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956ADED1CD8385600E0E0EE /* DescriptorsNavigationController.swift */; };
+		E956ADF01CD83C4300E0E0EE /* DescriptorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956ADEF1CD83C4300E0E0EE /* DescriptorDetailViewController.swift */; };
 		E9CC6B571CD6E04A0091B4B2 /* ItemsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */; };
 		E9CC6B591CD6E7030091B4B2 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */; };
 		E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4891C921864002833FF /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 		E93DAD361CCD698600F72E92 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E93DAD371CCD698600F72E92 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		E956ADED1CD8385600E0E0EE /* DescriptorsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorsNavigationController.swift; sourceTree = "<group>"; };
+		E956ADEF1CD83C4300E0E0EE /* DescriptorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorDetailViewController.swift; sourceTree = "<group>"; };
 		E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsNavigationController.swift; sourceTree = "<group>"; };
 		E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		E9ECC4861C921863002833FF /* Xper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */,
 				E956ADED1CD8385600E0E0EE /* DescriptorsNavigationController.swift */,
 				E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */,
+				E956ADEF1CD83C4300E0E0EE /* DescriptorDetailViewController.swift */,
 				E927D0C61CD682EF00E658B5 /* DescriptionsViewController.swift */,
 				E927D0C81CD6830C00E658B5 /* IdentificationViewController.swift */,
 			);
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E956ADF01CD83C4300E0E0EE /* DescriptorDetailViewController.swift in Sources */,
 				E9CC6B591CD6E7030091B4B2 /* ItemDetailViewController.swift in Sources */,
 				E927D0D11CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */,
 				E927D0C71CD682EF00E658B5 /* DescriptionsViewController.swift in Sources */,

@@ -28,9 +28,6 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Handle the text field’s user input through delegate callbacks.
-        //        nameTextField.delegate = self
-        
         if let item = item {
             navigationItem.title = item.name
             let detailString = item.detail
@@ -42,7 +39,7 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
 }
 
 
-private extension UITextView {
+extension UITextView {
     func setHTMLFromString(text: String) {
         let modifiedFont = NSString(format:"<span style=\"font-family: \(self.font!.fontName); font-size: \(self.font!.pointSize)\">%@</span>", text) as String
         do{
