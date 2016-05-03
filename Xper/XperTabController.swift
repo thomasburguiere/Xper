@@ -24,13 +24,6 @@ class XperTabController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        print("prout")
-        
-    }
-    
-    
     func loadSampleData() {
         let sampleFilePath = NSBundle.mainBundle().pathForResource("genetta", ofType: "sdd.xml")
         let sampleFileData = NSData(contentsOfFile: sampleFilePath!)
@@ -43,7 +36,7 @@ class XperTabController: UITabBarController {
             itemViewController.items = dataset?.items
             
             
-            let descriptorViewController = viewControllers[1] as! DescriptorsTableViewController
+            let descriptorViewController = viewControllers[1] as! DescriptorsNavigationController
             descriptorViewController.descriptors = dataset?.descriptors
         }
     }

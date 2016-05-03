@@ -38,7 +38,6 @@ class DescriptorsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("descriptorCell")as! DatasetObjectTableViewCell
         let descriptor = descriptors![indexPath.row]
         cell.objectName?.text = descriptor.name
-        cell.objectDescription.text = descriptor.detail
         
         return cell
     }
