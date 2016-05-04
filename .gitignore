@@ -6,5 +6,6 @@ Carthage/Build/*
 Carthage/Build/iOS/*
 !Carthage/Build/iOS/XperFramework.framework
 !Carthage/Build/iOS/Agrume.framework
+!Carthage/Build/iOS/MapleBacon.framework
 
 Xper.xcodeproj/xcuserdata/thomas.xcuserdatad/xcdebugger

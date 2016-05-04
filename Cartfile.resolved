@@ -1,2 +1,3 @@
 github "JanGorman/Agrume" "2.3.0"
-github "thomasburguiere/Xper-framework" "5cef7f13122ab5c65aebbb99703426eab97cba7d"
+github "zalando/MapleBacon" "2.0.8"
+github "thomasburguiere/Xper-framework" "bf75c5da05f95774e53f65dc29f39d2d20d051b7"
