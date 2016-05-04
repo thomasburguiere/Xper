@@ -8,11 +8,13 @@
 
 import UIKit
 import XperFramework
+import MapleBacon
 
 class ItemDetailViewController: UIViewController, UINavigationControllerDelegate {
     var item: Item?
     
     
+    @IBOutlet weak var firstItemImageView: UIImageView!
     @IBOutlet weak var itemDetailText: UITextView!
     
     @IBAction func cancel(sender: AnyObject) {
@@ -33,6 +35,12 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
             let detailString = item.detail
             itemDetailText.setHTMLFromString(detailString!)
             
+            let imageResource = item.resources.filter{$0.type == .Image}.first
+            if imageResource != nil {
+                if let imageURL = imageResource?.url {
+                    firstItemImageView.setImageWithURL(imageURL)
+                }
+            }
         }
         
     }

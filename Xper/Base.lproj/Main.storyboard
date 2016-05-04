@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -124,18 +125,28 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26z-et-dfk">
+                                <rect key="frame" x="210" y="314" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="26z-et-dfk" secondAttribute="height" multiplier="1:1" id="VbN-dT-xzD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IKq-t3-RsO" firstAttribute="leading" secondItem="PVH-70-h5g" secondAttribute="leadingMargin" id="SSL-dH-ORn"/>
+                            <constraint firstItem="26z-et-dfk" firstAttribute="top" secondItem="IKq-t3-RsO" secondAttribute="bottom" constant="8" id="cmR-cK-m1z"/>
                             <constraint firstItem="IKq-t3-RsO" firstAttribute="trailing" secondItem="PVH-70-h5g" secondAttribute="trailingMargin" id="n8i-4p-TES"/>
                             <constraint firstItem="IKq-t3-RsO" firstAttribute="top" secondItem="8gk-1i-fwA" secondAttribute="bottom" constant="8" id="pZB-De-b3J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="26z-et-dfk" secondAttribute="trailing" constant="30" id="qb5-cx-gRP"/>
+                            <constraint firstItem="26z-et-dfk" firstAttribute="leading" secondItem="PVH-70-h5g" secondAttribute="leadingMargin" constant="30" id="tbO-Ad-Jhv"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="prc-PH-VGn"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="firstItemImageView" destination="26z-et-dfk" id="3br-Kg-oer"/>
                         <outlet property="itemDetailText" destination="IKq-t3-RsO" id="AaJ-Et-XYw"/>
                     </connections>
                 </viewController>
