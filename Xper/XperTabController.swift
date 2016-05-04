@@ -25,7 +25,7 @@ class XperTabController: UITabBarController {
     }
     
     func loadSampleData() {
-        let sampleFilePath = NSBundle.mainBundle().pathForResource("genetta", ofType: "sdd.xml")
+        let sampleFilePath = NSBundle.mainBundle().pathForResource("corals", ofType: "sdd.xml")
         let sampleFileData = NSData(contentsOfFile: sampleFilePath!)
         
         let parser = SddNSXMLParser()
