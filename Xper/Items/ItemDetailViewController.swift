@@ -9,23 +9,22 @@
 import UIKit
 import XperFramework
 import MapleBacon
+import Agrume
 
-class ItemDetailViewController: UIViewController, UINavigationControllerDelegate {
+class ItemDetailViewController: UIViewController, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     var item: Item?
     
     
     @IBOutlet weak var firstItemImageView: UIImageView!
     @IBOutlet weak var itemDetailText: UITextView!
     
-    @IBAction func cancel(sender: AnyObject) {
-        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
-        let isPresentingInAddMealMode = presentingViewController is UINavigationController
-        if isPresentingInAddMealMode {
-            dismissViewControllerAnimated(true, completion: nil)
-        } else {
-            navigationController!.popViewControllerAnimated(true)
+    func openImage(sender: UITapGestureRecognizer) {
+        if let image = firstItemImageView.image {
+            let agrume = Agrume(image: image)
+            agrume.showFrom(self)
         }
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +41,11 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
                 }
             }
         }
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ItemDetailViewController.openImage(_:)))
+        tapGestureRecognizer.delegate = self
+        firstItemImageView.userInteractionEnabled = true
+        firstItemImageView.addGestureRecognizer(tapGestureRecognizer)
         
     }
 }
