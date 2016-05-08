@@ -143,8 +143,14 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="prc-PH-VGn"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Title" id="prc-PH-VGn">
+                        <barButtonItem key="rightBarButtonItem" title="Description" id="OEF-Sj-F26">
+                            <connections>
+                                <segue destination="P5Q-Vs-xOS" kind="show" identifier="showItemDescription" id="HVa-RX-fbp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="firstItemImageView" destination="26z-et-dfk" id="3br-Kg-oer"/>
                         <outlet property="itemDetailText" destination="IKq-t3-RsO" id="AaJ-Et-XYw"/>
@@ -153,6 +159,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hn4-sK-eCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2733" y="-712"/>
+        </scene>
+        <!--Item Description View Controller-->
+        <scene sceneID="rHd-g8-HWJ">
+            <objects>
+                <tableViewController id="P5Q-Vs-xOS" customClass="ItemDescriptionViewController" customModule="Xper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="K0q-lu-G9f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="descriptionCell" rowHeight="38" id="mBF-7I-TZd" customClass="DatasetObjectTableViewCell" customModule="Xper" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mBF-7I-TZd" id="rMt-pf-2tN">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="37"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60L-db-nIH">
+                                            <rect key="frame" x="8" y="8" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="objectName" destination="60L-db-nIH" id="N2E-44-cFk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P5Q-Vs-xOS" id="6pD-cO-LiX"/>
+                            <outlet property="delegate" destination="P5Q-Vs-xOS" id="Id8-7u-ZnK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVM-UN-5K5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3441" y="-711"/>
         </scene>
         <!--Descriptor Detail-->
         <scene sceneID="HZf-MF-jaZ">

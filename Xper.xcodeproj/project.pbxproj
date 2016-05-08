@@ -16,6 +16,7 @@
 		E927D0D11CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */; };
 		E927D0D21CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */; };
 		E927D0D41CD6A17300E658B5 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D31CD6A17300E658B5 /* Misc.swift */; };
+		E92F6D391CDFE26400EFA2BC /* ItemDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6D381CDFE26400EFA2BC /* ItemDescriptionViewController.swift */; };
 		E956ADEE1CD8385600E0E0EE /* DescriptorsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956ADED1CD8385600E0E0EE /* DescriptorsNavigationController.swift */; };
 		E956ADF01CD83C4300E0E0EE /* DescriptorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956ADEF1CD83C4300E0E0EE /* DescriptorDetailViewController.swift */; };
 		E968CC031CD942790014F222 /* DatasetObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */; };
@@ -59,6 +60,7 @@
 		E927D0CD1CD697E200E658B5 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorsTableViewController.swift; sourceTree = "<group>"; };
 		E927D0D31CD6A17300E658B5 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		E92F6D381CDFE26400EFA2BC /* ItemDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDescriptionViewController.swift; sourceTree = "<group>"; };
 		E93DAD361CCD698600F72E92 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E93DAD371CCD698600F72E92 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		E956ADED1CD8385600E0E0EE /* DescriptorsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorsNavigationController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */,
 				E927D0CD1CD697E200E658B5 /* ItemsTableViewController.swift */,
 				E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */,
+				E92F6D381CDFE26400EFA2BC /* ItemDescriptionViewController.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				E968CC031CD942790014F222 /* DatasetObjectTableViewCell.swift in Sources */,
 				E9CC6B591CD6E7030091B4B2 /* ItemDetailViewController.swift in Sources */,
 				E927D0D11CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */,
+				E92F6D391CDFE26400EFA2BC /* ItemDescriptionViewController.swift in Sources */,
 				E927D0C71CD682EF00E658B5 /* DescriptionsViewController.swift in Sources */,
 				E956ADEE1CD8385600E0E0EE /* DescriptorsNavigationController.swift in Sources */,
 				E9ECC48C1C921864002833FF /* XperTabController.swift in Sources */,

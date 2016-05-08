@@ -46,7 +46,16 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
         tapGestureRecognizer.delegate = self
         firstItemImageView.userInteractionEnabled = true
         firstItemImageView.addGestureRecognizer(tapGestureRecognizer)
-        
+    }
+    
+    // MARK Navigation setup
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showItemDescription" {
+            let itemDescriptionViewController = segue.destinationViewController as! ItemDescriptionViewController
+            itemDescriptionViewController.item = item
+            
+        }
     }
 }
 
