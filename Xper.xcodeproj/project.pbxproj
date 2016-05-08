@@ -53,7 +53,7 @@
 
 /* Begin PBXFileReference section */
 		E91BB29C1CCE9C5E001D82FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E927D0C61CD682EF00E658B5 /* DescriptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionsViewController.swift; sourceTree = "<group>"; };
+		E927D0C61CD682EF00E658B5 /* DescriptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionsViewController.swift; path = Descriptors/DescriptionsViewController.swift; sourceTree = "<group>"; };
 		E927D0C81CD6830C00E658B5 /* IdentificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentificationViewController.swift; sourceTree = "<group>"; };
 		E927D0CA1CD6876600E658B5 /* genetta.sdd.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = genetta.sdd.xml; sourceTree = "<group>"; };
 		E927D0CD1CD697E200E658B5 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
@@ -126,9 +126,9 @@
 		E976E9E71CDB372100060E7A /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */,
 				E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */,
 				E927D0CD1CD697E200E658B5 /* ItemsTableViewController.swift */,
+				E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -136,10 +136,9 @@
 		E976E9E81CDB372F00060E7A /* Descriptors */ = {
 			isa = PBXGroup;
 			children = (
-				E927D0C61CD682EF00E658B5 /* DescriptionsViewController.swift */,
-				E956ADEF1CD83C4300E0E0EE /* DescriptorDetailViewController.swift */,
 				E956ADED1CD8385600E0E0EE /* DescriptorsNavigationController.swift */,
 				E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */,
+				E956ADEF1CD83C4300E0E0EE /* DescriptorDetailViewController.swift */,
 			);
 			path = Descriptors;
 			sourceTree = "<group>";
@@ -177,6 +176,7 @@
 				E976E9E71CDB372100060E7A /* Items */,
 				E976E9E81CDB372F00060E7A /* Descriptors */,
 				E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */,
+				E927D0C61CD682EF00E658B5 /* DescriptionsViewController.swift */,
 				E927D0C81CD6830C00E658B5 /* IdentificationViewController.swift */,
 				E927D0D31CD6A17300E658B5 /* Misc.swift */,
 				E9ECC4951C921864002833FF /* Info.plist */,
