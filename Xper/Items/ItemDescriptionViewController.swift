@@ -32,22 +32,31 @@ class ItemDescriptionViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let descriptorUsedAsKeyForSection = descriptorKeys![section]
+        
+        let des = item?.itemDescription?.descriptionElements[descriptorUsedAsKeyForSection]
+        
         if descriptorUsedAsKeyForSection.isCategorical {
-            return (descriptorUsedAsKeyForSection as! CategoricalDescriptor).states.count
+            return (des?.selectedStates.count)!
         }
         return 1
     }
     
-    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        return descriptorKeys?.map{$0.name!}
+
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return descriptorKeys![section].name
     }
-    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell") as! DatasetObjectTableViewCell
-        indexPath.row
-//        let item = items![indexPath.row]
-//        cell.objectName?.text = item.name
+        
+        let descriptorKey = descriptorKeys![indexPath.section]
+        let des = item?.itemDescription?.descriptionElements[descriptorKey]
+        if descriptorKey.isCategorical{
+            cell.objectName.text = des?.selectedStates[indexPath.row].name
+        } else {
+            let qm = des?.quantitativeMeasure
+            cell.objectName.text = "min: \(qm?.computedMin), average: \(qm?.mean), max: \(qm?.computedMax)"
+        }
         
         return cell
     }
