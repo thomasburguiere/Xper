@@ -22,6 +22,7 @@
 		E968CC031CD942790014F222 /* DatasetObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */; };
 		E9CC6B571CD6E04A0091B4B2 /* ItemsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */; };
 		E9CC6B591CD6E7030091B4B2 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */; };
+		E9E4F88D1CE1EE22001C03A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4F88C1CE1EE22001C03A5 /* MainViewController.swift */; };
 		E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4891C921864002833FF /* AppDelegate.swift */; };
 		E9ECC48C1C921864002833FF /* XperTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC48B1C921864002833FF /* XperTabController.swift */; };
 		E9ECC48F1C921864002833FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9ECC48D1C921864002833FF /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetObjectTableViewCell.swift; sourceTree = "<group>"; };
 		E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsNavigationController.swift; sourceTree = "<group>"; };
 		E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		E9E4F88C1CE1EE22001C03A5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E9ECC4861C921863002833FF /* Xper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9ECC4891C921864002833FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9ECC48B1C921864002833FF /* XperTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperTabController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 			path = Descriptors;
 			sourceTree = "<group>";
 		};
+		E9E4F88B1CE1EE10001C03A5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E9E4F88C1CE1EE22001C03A5 /* MainViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		E9ECC47D1C921863002833FF = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 				E9ECC4891C921864002833FF /* AppDelegate.swift */,
 				E9ECC4901C921864002833FF /* Assets.xcassets */,
 				E9ECC48B1C921864002833FF /* XperTabController.swift */,
+				E9E4F88B1CE1EE10001C03A5 /* Main */,
 				E976E9E71CDB372100060E7A /* Items */,
 				E976E9E81CDB372F00060E7A /* Descriptors */,
 				E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */,
@@ -375,6 +386,7 @@
 				E956ADEE1CD8385600E0E0EE /* DescriptorsNavigationController.swift in Sources */,
 				E9ECC48C1C921864002833FF /* XperTabController.swift in Sources */,
 				E927D0CE1CD697E200E658B5 /* ItemsTableViewController.swift in Sources */,
+				E9E4F88D1CE1EE22001C03A5 /* MainViewController.swift in Sources */,
 				E927D0D41CD6A17300E658B5 /* Misc.swift in Sources */,
 				E9CC6B571CD6E04A0091B4B2 /* ItemsNavigationController.swift in Sources */,
 				E91BB29D1CCE9C5E001D82FA /* README.md in Sources */,

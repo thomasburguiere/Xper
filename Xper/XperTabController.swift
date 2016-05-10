@@ -55,6 +55,9 @@ class XperTabController: UITabBarController, NSURLConnectionDelegate {
     
     private func setupControllers() {
         if let viewControllers = self.viewControllers {
+            let mainViewController = viewControllers[0] as! MainViewController
+            mainViewController.dataset = self.dataset
+            
             let itemViewController = viewControllers[1] as! ItemsNavigationController
             itemViewController.items = dataset?.items
             
