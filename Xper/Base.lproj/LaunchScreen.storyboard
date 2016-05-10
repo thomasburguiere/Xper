@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GPL-fb-L6N">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPL-fb-L6N">
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items/>
@@ -28,7 +28,7 @@
                         <constraints>
                             <constraint firstItem="GPL-fb-L6N" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="JUS-F3-dF8"/>
                             <constraint firstItem="GPL-fb-L6N" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="kCG-Ra-r9n"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GPL-fb-L6N" secondAttribute="trailing" id="zxW-Jd-bqg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GPL-fb-L6N" secondAttribute="trailing" constant="-20" id="zxW-Jd-bqg"/>
                         </constraints>
                     </view>
                 </viewController>
