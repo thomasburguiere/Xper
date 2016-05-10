@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  XperTabController.swift
 //  Xper
 //
 //  Created by Thomas Burguiere on 10/03/16.
