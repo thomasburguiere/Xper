@@ -11,11 +11,15 @@ import XperFramework
 
 class ItemsTableViewController: UITableViewController {
     
-    var items: [Item]?
+    var items: [Item]? {
+        return datasource?.getItems()
+    }
+    var datasource: ItemTableViewDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.    
+        // Do any additional setup after loading the view, typically from a nib.
+        datasource?.register(itemTableView: self.tableView)
     }
     
     override func didReceiveMemoryWarning() {

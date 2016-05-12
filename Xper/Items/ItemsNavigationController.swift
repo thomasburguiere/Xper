@@ -10,8 +10,7 @@ import UIKit
 import XperFramework
 
 class ItemsNavigationController: UINavigationController {
-    var items: [Item]?
-    
+    var datasource: ItemTableViewDatasource?
     
     
     
@@ -19,7 +18,7 @@ class ItemsNavigationController: UINavigationController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let itemListController = self.viewControllers[0] as! ItemsTableViewController
-        itemListController.items = items
+        itemListController.datasource = datasource
     }
     
     override func didReceiveMemoryWarning() {

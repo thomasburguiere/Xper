@@ -454,10 +454,18 @@
                                     <constraint firstItem="Rfq-Nf-Dla" firstAttribute="trailing" secondItem="3cJ-UP-ujR" secondAttribute="trailing" id="tmS-iB-FSs"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pq3-RG-Rda">
+                                <rect key="frame" x="277" y="386" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loadDataset:" destination="VqB-hR-Ru2" eventType="touchUpInside" id="dzc-k3-4dX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.56470588239999997" green="0.76862745099999996" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Pq3-RG-Rda" firstAttribute="centerX" secondItem="pxe-RJ-3gJ" secondAttribute="centerX" id="AJQ-Q3-JsK"/>
                             <constraint firstItem="hOs-KD-kfS" firstAttribute="centerY" secondItem="pxe-RJ-3gJ" secondAttribute="centerY" id="CuW-FD-LKV"/>
                             <constraint firstItem="hOs-KD-kfS" firstAttribute="centerX" secondItem="pxe-RJ-3gJ" secondAttribute="centerX" id="fsR-0Q-LIX"/>
                         </constraints>

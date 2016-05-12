@@ -11,11 +11,15 @@ import XperFramework
 
 class DescriptorsTableViewController: UITableViewController {
     
-    var descriptors: [Descriptor]?
+    var descriptors: [Descriptor]? {
+        return datasource?.getDescriptors()
+    }
+    var datasource: DescriptorTableViewDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        datasource?.register(descriptorTableView: self.tableView)
     }
     
     override func didReceiveMemoryWarning() {
