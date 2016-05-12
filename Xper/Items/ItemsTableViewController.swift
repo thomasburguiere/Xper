@@ -14,17 +14,21 @@ class ItemsTableViewController: UITableViewController {
     var items: [Item]? {
         return datasource?.getItems()
     }
-    var datasource: ItemTableViewDatasource?
+    var datasource: ItemsTableViewControllerDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        datasource?.register(itemTableView: self.tableView)
+        datasource?.register(itemsTableViewController: self)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func reload(){
+        self.tableView.reloadData()
     }
     
     

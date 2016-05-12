@@ -10,7 +10,7 @@ import UIKit
 import XperFramework
 
 class ItemsNavigationController: UINavigationController {
-    var datasource: ItemTableViewDatasource?
+    var datasource: ItemsTableViewControllerDatasource?
     
     
     

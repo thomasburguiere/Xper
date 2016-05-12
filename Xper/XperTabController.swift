@@ -9,11 +9,11 @@
 import UIKit
 import XperFramework
 
-class XperTabController: UITabBarController, MainViewControllerDelegate, ItemTableViewDatasource, DescriptorTableViewDatasource {
+class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsTableViewControllerDatasource, DescriptorsTableViewControllerDatasource {
     
     var dataset: Dataset?
-    var itemTableView: UITableView?
-    var descriptorTableView: UITableView?
+    var itemsTableViewController: ItemsTableViewController?
+    var descriptorsTableViewController: DescriptorsTableViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +41,8 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemTab
     // MARK: MainViewControllerDelegate
     func mainViewController(mainViewController: MainViewController, didLoadDataset dataset: Dataset) {
         self.dataset = dataset
-        itemTableView?.reloadData()
-        descriptorTableView?.reloadData()
+        itemsTableViewController?.reload()
+        descriptorsTableViewController?.reload()
         setupControllers()
     }
     
@@ -51,8 +51,8 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemTab
         return dataset?.items
     }
     
-    func register(itemTableView tableView: UITableView) {
-        itemTableView = tableView
+    func register(itemsTableViewController itemsTableViewController: ItemsTableViewController) {
+        self.itemsTableViewController = itemsTableViewController
     }
     
     // MARK: DescriptorTableViewDatasource
@@ -60,8 +60,8 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemTab
         return dataset?.descriptors
     }
     
-    func register(descriptorTableView tableView: UITableView) {
-        descriptorTableView = tableView
+    func register(descriptorsTableViewController descriptorsTableViewController: DescriptorsTableViewController) {
+        self.descriptorsTableViewController = descriptorsTableViewController
     }
     
     

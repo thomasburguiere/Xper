@@ -14,12 +14,12 @@ class DescriptorsTableViewController: UITableViewController {
     var descriptors: [Descriptor]? {
         return datasource?.getDescriptors()
     }
-    var datasource: DescriptorTableViewDatasource?
+    var datasource: DescriptorsTableViewControllerDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        datasource?.register(descriptorTableView: self.tableView)
+        datasource?.register(descriptorsTableViewController: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,6 +27,9 @@ class DescriptorsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func reload() {
+        self.tableView.reloadData()
+    }
     
     // MARK: - Table view data source functions
     
