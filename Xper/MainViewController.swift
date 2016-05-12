@@ -23,8 +23,14 @@ class MainViewController : UIViewController {
     @IBOutlet weak var descriptorsLabel: UILabel!
     
     
-    @IBAction func loadDataset(sender: AnyObject) {
+    @IBAction func loadGenetDataset(sender: AnyObject) {
         loadSampleDataFromUrl("https://www.dropbox.com/s/tr7kon3uc4b7tpq/genetta.sdd.xml?dl=1")
+    }
+    @IBAction func loadCoralsDataset(sender: AnyObject) {
+        loadSampleDataFromUrl("https://www.dropbox.com/s/4nxgh06lkaklpdq/corals.sdd.xml?dl=1")
+    }
+    @IBAction func loadCichoDataset(sender: AnyObject) {
+        loadSampleDataFromUrl("https://www.dropbox.com/s/byjmovgiaftn6e1/cichorieae.sdd.xml?dl=1")
     }
     // 1
     let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
