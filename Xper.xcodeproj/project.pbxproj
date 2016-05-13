@@ -10,8 +10,6 @@
 		E91BB29D1CCE9C5E001D82FA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E91BB29C1CCE9C5E001D82FA /* README.md */; };
 		E927D0C71CD682EF00E658B5 /* DescriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0C61CD682EF00E658B5 /* DescriptionsViewController.swift */; };
 		E927D0C91CD6830C00E658B5 /* IdentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0C81CD6830C00E658B5 /* IdentificationViewController.swift */; };
-		E927D0CB1CD6876600E658B5 /* genetta.sdd.xml in Resources */ = {isa = PBXBuildFile; fileRef = E927D0CA1CD6876600E658B5 /* genetta.sdd.xml */; };
-		E927D0CC1CD6876600E658B5 /* genetta.sdd.xml in Resources */ = {isa = PBXBuildFile; fileRef = E927D0CA1CD6876600E658B5 /* genetta.sdd.xml */; };
 		E927D0CE1CD697E200E658B5 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0CD1CD697E200E658B5 /* ItemsTableViewController.swift */; };
 		E927D0D11CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */; };
 		E927D0D21CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */; };
@@ -23,6 +21,8 @@
 		E9A2D5B51CE404DE00A1D49A /* MainViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */; };
 		E9A2D5B71CE40BCD00A1D49A /* ItemsTableViewControllerDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D5B61CE40BCD00A1D49A /* ItemsTableViewControllerDatasource.swift */; };
 		E9A2D5B91CE4148400A1D49A /* DescriptorsTableViewControllerDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D5B81CE4148400A1D49A /* DescriptorsTableViewControllerDatasource.swift */; };
+		E9AE92041CE5B8FD00F4DA4C /* DBChooser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9AE92021CE5B8FD00F4DA4C /* DBChooser.bundle */; };
+		E9AE92051CE5B8FD00F4DA4C /* DBChooser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9AE92031CE5B8FD00F4DA4C /* DBChooser.framework */; };
 		E9CC6B571CD6E04A0091B4B2 /* ItemsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */; };
 		E9CC6B591CD6E7030091B4B2 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */; };
 		E9E4F88D1CE1EE22001C03A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4F88C1CE1EE22001C03A5 /* MainViewController.swift */; };
@@ -60,7 +60,6 @@
 		E91BB29C1CCE9C5E001D82FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E927D0C61CD682EF00E658B5 /* DescriptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionsViewController.swift; path = Descriptors/DescriptionsViewController.swift; sourceTree = "<group>"; };
 		E927D0C81CD6830C00E658B5 /* IdentificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentificationViewController.swift; sourceTree = "<group>"; };
-		E927D0CA1CD6876600E658B5 /* genetta.sdd.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = genetta.sdd.xml; sourceTree = "<group>"; };
 		E927D0CD1CD697E200E658B5 /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		E927D0D01CD69E6B00E658B5 /* DescriptorsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorsTableViewController.swift; sourceTree = "<group>"; };
 		E927D0D31CD6A17300E658B5 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
@@ -73,6 +72,8 @@
 		E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E9A2D5B61CE40BCD00A1D49A /* ItemsTableViewControllerDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewControllerDatasource.swift; sourceTree = "<group>"; };
 		E9A2D5B81CE4148400A1D49A /* DescriptorsTableViewControllerDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorsTableViewControllerDatasource.swift; sourceTree = "<group>"; };
+		E9AE92021CE5B8FD00F4DA4C /* DBChooser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DBChooser.bundle; sourceTree = "<group>"; };
+		E9AE92031CE5B8FD00F4DA4C /* DBChooser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DBChooser.framework; sourceTree = "<group>"; };
 		E9CC6B561CD6E04A0091B4B2 /* ItemsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsNavigationController.swift; sourceTree = "<group>"; };
 		E9CC6B581CD6E7030091B4B2 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		E9E4F88C1CE1EE22001C03A5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AE92051CE5B8FD00F4DA4C /* DBChooser.framework in Frameworks */,
 				E9ED24BB1CCD416A002C9317 /* XperFramework.framework in Frameworks */,
 				E9F566ED1CDA92E50029D745 /* Agrume.framework in Frameworks */,
 				E9F566EF1CDA987C0029D745 /* MapleBacon.framework in Frameworks */,
@@ -126,6 +128,8 @@
 		87295DEBDACCB1065B7A323A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9AE92021CE5B8FD00F4DA4C /* DBChooser.bundle */,
+				E9AE92031CE5B8FD00F4DA4C /* DBChooser.framework */,
 				E9F566EE1CDA987C0029D745 /* MapleBacon.framework */,
 				E9F566EC1CDA92E50029D745 /* Agrume.framework */,
 				E9ED24BA1CCD416A002C9317 /* XperFramework.framework */,
@@ -206,7 +210,6 @@
 				E9ECC4921C921864002833FF /* LaunchScreen.storyboard */,
 				E9ECC48D1C921864002833FF /* Main.storyboard */,
 				E9F566EA1CDA916D0029D745 /* corals.sdd.xml */,
-				E927D0CA1CD6876600E658B5 /* genetta.sdd.xml */,
 			);
 			path = Xper;
 			sourceTree = "<group>";
@@ -341,7 +344,7 @@
 				E9ECC4941C921864002833FF /* LaunchScreen.storyboard in Resources */,
 				E9ECC4911C921864002833FF /* Assets.xcassets in Resources */,
 				E9ECC48F1C921864002833FF /* Main.storyboard in Resources */,
-				E927D0CB1CD6876600E658B5 /* genetta.sdd.xml in Resources */,
+				E9AE92041CE5B8FD00F4DA4C /* DBChooser.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +352,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E927D0CC1CD6876600E658B5 /* genetta.sdd.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +555,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Xper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -572,6 +575,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Xper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
