@@ -29,14 +29,6 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
         // Dispose of any resources that can be recreated.
     }
     
-    func loadSampleData() {
-        let sampleFilePath = NSBundle.mainBundle().pathForResource("corals", ofType: "sdd.xml")
-        let sampleFileData = NSData(contentsOfFile: sampleFilePath!)
-        
-        let parser = SddNSXMLParser()
-        dataset = parser.parseDataset(sampleFileData)
-    }
-
     
     // MARK: MainViewControllerDelegate
     func mainViewController(mainViewController: MainViewController, didLoadDataset dataset: Dataset) {
@@ -82,6 +74,13 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
             let descriptorViewController = viewControllers[2] as! DescriptorsNavigationController
             descriptorViewController.datasource = self
         }
+    
+    private func loadSampleData() {
+        let sampleFilePath = NSBundle.mainBundle().pathForResource("corals", ofType: "sdd.xml")
+        let sampleFileData = NSData(contentsOfFile: sampleFilePath!)
+        
+        let parser = SddNSXMLParser()
+        dataset = parser.parseDataset(sampleFileData)
     }
 
 
