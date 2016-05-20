@@ -9,7 +9,7 @@
 import Foundation
 import XperFramework
 
-protocol ItemsTableViewControllerDatasource {
+protocol ItemsDatasource {
     func getItems() -> [Item]?
     func register(itemsTableViewController itemsTableViewController: ItemsTableViewController)
 }

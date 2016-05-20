@@ -9,7 +9,7 @@
 import UIKit
 import XperFramework
 
-class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsTableViewControllerDatasource, DescriptorsTableViewControllerDatasource {
+class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDatasource, DescriptorsTableViewControllerDatasource {
     
     var dataset: Dataset?
     var itemsTableViewController: ItemsTableViewController?

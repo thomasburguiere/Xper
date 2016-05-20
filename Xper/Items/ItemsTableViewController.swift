@@ -14,7 +14,7 @@ class ItemsTableViewController: UITableViewController {
     var items: [Item]? {
         return datasource?.getItems()
     }
-    var datasource: ItemsTableViewControllerDatasource?
+    var datasource: ItemsDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
