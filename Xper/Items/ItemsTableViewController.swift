@@ -9,7 +9,7 @@
 import UIKit
 import XperFramework
 
-class ItemsTableViewController: UITableViewController {
+class ItemsTableViewController: UITableViewController, ItemsViewControllerProtocol {
     
     var items: [Item]? {
         return datasource?.getItems()
@@ -19,7 +19,7 @@ class ItemsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        datasource?.register(itemsTableViewController: self)
+        datasource?.register(itemsViewController: self)
     }
     
     override func didReceiveMemoryWarning() {

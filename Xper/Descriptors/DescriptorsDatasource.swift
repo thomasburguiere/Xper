@@ -11,5 +11,5 @@ import XperFramework
 
 protocol DescriptorsDatasource {
     func getDescriptors() -> [Descriptor]?
-    func register(descriptorsTableViewController descriptorsTableViewController: DescriptorsTableViewController)
+    func register(descriptorsViewController descriptorsViewController: DescriptorsViewControllerProtocol)
 }

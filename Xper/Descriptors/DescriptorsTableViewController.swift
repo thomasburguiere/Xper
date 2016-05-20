@@ -9,7 +9,7 @@
 import UIKit
 import XperFramework
 
-class DescriptorsTableViewController: UITableViewController {
+class DescriptorsTableViewController: UITableViewController, DescriptorsViewControllerProtocol {
     
     var descriptors: [Descriptor]? {
         return datasource?.getDescriptors()
@@ -19,7 +19,7 @@ class DescriptorsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        datasource?.register(descriptorsTableViewController: self)
+        datasource?.register(descriptorsViewController: self)
     }
     
     override func didReceiveMemoryWarning() {

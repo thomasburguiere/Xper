@@ -12,8 +12,8 @@ import XperFramework
 class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDatasource, DescriptorsDatasource {
     
     var dataset: Dataset?
-    var itemsTableViewController: ItemsTableViewController?
-    var descriptorsTableViewController: DescriptorsTableViewController?
+    var itemsViewController: ItemsViewControllerProtocol?
+    var descriptorsViewControllers: [DescriptorsViewControllerProtocol]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,27 +41,27 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
     // MARK: MainViewControllerDelegate
     func mainViewController(mainViewController: MainViewController, didLoadDataset dataset: Dataset) {
         self.dataset = dataset
-        itemsTableViewController?.reload()
-        descriptorsTableViewController?.reload()
+        itemsViewController?.reload()
+        descriptorsViewControllers?.forEach{$0.reload()}
         setupControllers()
     }
     
-    // MARK: ItemTableViewDatasource
+    // MARK: ItemsDatasource
     func getItems() -> [Item]? {
         return dataset?.items
     }
     
-    func register(itemsTableViewController itemsTableViewController: ItemsTableViewController) {
-        self.itemsTableViewController = itemsTableViewController
+    func register(itemsViewController itemsViewController: ItemsViewControllerProtocol) {
+        self.itemsViewController = itemsViewController
     }
     
-    // MARK: DescriptorTableViewDatasource
+    // MARK: DescriptorsDatasource
     func getDescriptors() -> [Descriptor]? {
         return dataset?.descriptors
     }
     
-    func register(descriptorsTableViewController descriptorsTableViewController: DescriptorsTableViewController) {
-        self.descriptorsTableViewController = descriptorsTableViewController
+    func register(descriptorsViewController descriptorsViewController: DescriptorsViewControllerProtocol) {
+        self.descriptorsViewControllers?.append(descriptorsViewController)
     }
     
     
