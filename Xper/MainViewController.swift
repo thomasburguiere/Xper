@@ -24,13 +24,13 @@ class MainViewController : UIViewController {
     
     
     @IBAction func loadGenetDataset(sender: AnyObject) {
-        loadSampleDataFromUrl("https://www.dropbox.com/s/tr7kon3uc4b7tpq/genetta.sdd.xml?dl=1")
+        loadDatasetDataFromUrl("https://www.dropbox.com/s/tr7kon3uc4b7tpq/genetta.sdd.xml?dl=1")
     }
     @IBAction func loadCoralsDataset(sender: AnyObject) {
-        loadSampleDataFromUrl("https://www.dropbox.com/s/4nxgh06lkaklpdq/corals.sdd.xml?dl=1")
+        loadDatasetDataFromUrl("https://www.dropbox.com/s/4nxgh06lkaklpdq/corals.sdd.xml?dl=1")
     }
     @IBAction func loadCichoDataset(sender: AnyObject) {
-        loadSampleDataFromUrl("https://www.dropbox.com/s/byjmovgiaftn6e1/cichorieae.sdd.xml?dl=1")
+        loadDatasetDataFromUrl("https://www.dropbox.com/s/byjmovgiaftn6e1/cichorieae.sdd.xml?dl=1")
     }
     // 1
     let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
@@ -51,7 +51,7 @@ class MainViewController : UIViewController {
         }
     }
     
-    func loadSampleDataFromUrl(urlString: String) {
+    func loadDatasetDataFromUrl(urlString: String) {
         // 1
         if dataTask != nil {
             dataTask?.cancel()
