@@ -9,7 +9,7 @@
 import Foundation
 import XperFramework
 
-protocol DescriptorsTableViewControllerDatasource {
+protocol DescriptorsDatasource {
     func getDescriptors() -> [Descriptor]?
     func register(descriptorsTableViewController descriptorsTableViewController: DescriptorsTableViewController)
 }

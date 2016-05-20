@@ -14,7 +14,7 @@ class DescriptorsTableViewController: UITableViewController {
     var descriptors: [Descriptor]? {
         return datasource?.getDescriptors()
     }
-    var datasource: DescriptorsTableViewControllerDatasource?
+    var datasource: DescriptorsDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()

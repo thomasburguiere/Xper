@@ -10,7 +10,7 @@ import UIKit
 import XperFramework
 
 class DescriptorsNavigationController: UINavigationController {
-    var datasource: DescriptorsTableViewControllerDatasource?
+    var datasource: DescriptorsDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
