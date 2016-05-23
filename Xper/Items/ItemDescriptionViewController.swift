@@ -13,11 +13,20 @@ class ItemDescriptionViewController: UITableViewController {
     var item: Item?
     var descriptorKeys : [Descriptor]?
     
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBAction func toggleEditMode(sender: AnyObject) {
+        isEditMode = !isEditMode
+        editButton.title = isEditMode ? "Done" : "Edit"
+    }
+    var isEditMode = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         descriptorKeys = Array(item!.itemDescription!.descriptionElements.keys)
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

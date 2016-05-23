@@ -196,6 +196,18 @@
                             <outlet property="delegate" destination="P5Q-Vs-xOS" id="Id8-7u-ZnK"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="neg-y3-myC">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Uvw-uR-5JW">
+                            <connections>
+                                <action selector="toggleEditMode:" destination="P5Q-Vs-xOS" id="g4r-wH-Phd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="editButton" destination="Uvw-uR-5JW" id="LXe-ZT-c1E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wVM-UN-5K5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
