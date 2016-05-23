@@ -11,20 +11,38 @@ import XperFramework
 
 class ItemDescriptionViewController: UITableViewController {
     var item: Item?
-    var descriptorKeys : [Descriptor]?
+    var descriptorsDatasource: DescriptorsDatasource?
+    
+    let descriptorNameSortFunction = { (descriptor1: Descriptor, descriptor2: Descriptor) -> Bool in
+        return descriptor1.name < descriptor2.name
+    }
+    
+    let stateNameSortFunction = { (State1: State, state2: State) -> Bool in
+        return State1.name < state2.name
+    }
+
+    
+    var descriptorKeys : [Descriptor]? {
+        if isEditMode {
+            return descriptorsDatasource?.getDescriptors()?.sort(descriptorNameSortFunction)
+        }
+        else {
+            return Array(item!.itemDescription!.descriptionElements.keys).sort(descriptorNameSortFunction)
+        }
+    }
     
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBAction func toggleEditMode(sender: AnyObject) {
         isEditMode = !isEditMode
         editButton.title = isEditMode ? "Done" : "Edit"
+        (self.view as! UITableView).reloadData()
     }
     var isEditMode = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        descriptorKeys = Array(item!.itemDescription!.descriptionElements.keys)
     }
+    
     
     
     
@@ -36,7 +54,7 @@ class ItemDescriptionViewController: UITableViewController {
     // MARK: - Table view data source functions
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return item!.itemDescription!.descriptionElements.keys.count
+        return descriptorKeys!.count
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +63,12 @@ class ItemDescriptionViewController: UITableViewController {
         let des = item?.itemDescription?.descriptionElements[descriptorUsedAsKeyForSection]
         
         if descriptorUsedAsKeyForSection.isCategorical {
-            return (des?.selectedStates.count)!
+            if isEditMode {
+                return (descriptorUsedAsKeyForSection as! CategoricalDescriptor).states.count
+            }
+            else {
+                return (des?.selectedStates.count)!
+            }
         }
         return 1
     }
@@ -61,10 +84,19 @@ class ItemDescriptionViewController: UITableViewController {
         let descriptorKey = descriptorKeys![indexPath.section]
         let des = item?.itemDescription?.descriptionElements[descriptorKey]
         if descriptorKey.isCategorical{
-            cell.objectName.text = des?.selectedStates[indexPath.row].name
+            let selectedStates = des?.selectedStates.sort(stateNameSortFunction)
+            if !isEditMode {
+                cell.objectName.text = selectedStates![indexPath.row].name!
+            }
+            else {
+                let states = (descriptorKey as! CategoricalDescriptor).states.sort(stateNameSortFunction)
+                let currentState = states[indexPath.row]
+                let isStateSelected = (selectedStates?.contains({$0 === currentState}))!
+                cell.objectName.text = isStateSelected ? "✓ " + currentState.name! : "  " + currentState.name!
+            }
         } else {
             let qm = des?.quantitativeMeasure
-            cell.objectName.text = "min: \(qm?.computedMin), average: \(qm?.mean), max: \(qm?.computedMax)"
+            cell.objectName.text = isEditMode ? "" : "min: \(qm?.computedMin), average: \(qm?.mean), max: \(qm?.computedMax)"
         }
         
         return cell

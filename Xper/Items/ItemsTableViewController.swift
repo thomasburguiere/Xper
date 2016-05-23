@@ -12,14 +12,15 @@ import XperFramework
 class ItemsTableViewController: UITableViewController, ItemsViewControllerProtocol {
     
     var items: [Item]? {
-        return datasource?.getItems()
+        return itemsDatasource?.getItems()
     }
-    var datasource: ItemsDatasource?
+    var itemsDatasource: ItemsDatasource?
+    var descriptorsDatasource: DescriptorsDatasource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        datasource?.register(itemsViewController: self)
+        itemsDatasource?.register(itemsViewController: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,6 +62,7 @@ class ItemsTableViewController: UITableViewController, ItemsViewControllerProtoc
                 let indexPath = tableView.indexPathForCell(selectedItemCell)
                 let selectedItem = items![(indexPath?.row)!]
                 itemDetailViewController.item = selectedItem
+                itemDetailViewController.descriptorsDatasource = descriptorsDatasource
             }
         }
         else if segue.identifier == "AddItem" {

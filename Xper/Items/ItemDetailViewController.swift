@@ -13,6 +13,7 @@ import Agrume
 
 class ItemDetailViewController: UIViewController, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
     var item: Item?
+    var descriptorsDatasource: DescriptorsDatasource?
     
     
     @IBOutlet weak var firstItemImageView: UIImageView!
@@ -54,6 +55,7 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
         if segue.identifier == "showItemDescription" {
             let itemDescriptionViewController = segue.destinationViewController as! ItemDescriptionViewController
             itemDescriptionViewController.item = item
+            itemDescriptionViewController.descriptorsDatasource = descriptorsDatasource
             
         }
     }

@@ -20,6 +20,7 @@
 		E956ADEE1CD8385600E0E0EE /* DescriptorsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956ADED1CD8385600E0E0EE /* DescriptorsNavigationController.swift */; };
 		E956ADF01CD83C4300E0E0EE /* DescriptorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E956ADEF1CD83C4300E0E0EE /* DescriptorDetailViewController.swift */; };
 		E961A2381CF2DC500038049D /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E961A2371CF2DC500038049D /* DescriptionTableViewCell.swift */; };
+		E961A23A1CF2E89D0038049D /* genetta.sdd.xml in Resources */ = {isa = PBXBuildFile; fileRef = E961A2391CF2E89D0038049D /* genetta.sdd.xml */; };
 		E968CC031CD942790014F222 /* DatasetObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */; };
 		E9A2D5B51CE404DE00A1D49A /* MainViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */; };
 		E9A2D5B71CE40BCD00A1D49A /* ItemsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D5B61CE40BCD00A1D49A /* ItemsDatasource.swift */; };
@@ -74,6 +75,7 @@
 		E956ADED1CD8385600E0E0EE /* DescriptorsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorsNavigationController.swift; sourceTree = "<group>"; };
 		E956ADEF1CD83C4300E0E0EE /* DescriptorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorDetailViewController.swift; sourceTree = "<group>"; };
 		E961A2371CF2DC500038049D /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		E961A2391CF2E89D0038049D /* genetta.sdd.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = genetta.sdd.xml; sourceTree = "<group>"; };
 		E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetObjectTableViewCell.swift; sourceTree = "<group>"; };
 		E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E9A2D5B61CE40BCD00A1D49A /* ItemsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsDatasource.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				E9ECC4951C921864002833FF /* Info.plist */,
 				E9ECC4921C921864002833FF /* LaunchScreen.storyboard */,
 				E9ECC48D1C921864002833FF /* Main.storyboard */,
+				E961A2391CF2E89D0038049D /* genetta.sdd.xml */,
 				E9F566EA1CDA916D0029D745 /* corals.sdd.xml */,
 			);
 			path = Xper;
@@ -350,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F566EB1CDA916D0029D745 /* corals.sdd.xml in Resources */,
+				E961A23A1CF2E89D0038049D /* genetta.sdd.xml in Resources */,
 				E9ECC4941C921864002833FF /* LaunchScreen.storyboard in Resources */,
 				E9ECC4911C921864002833FF /* Assets.xcassets in Resources */,
 				E9ECC48F1C921864002833FF /* Main.storyboard in Resources */,

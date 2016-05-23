@@ -14,6 +14,7 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
     var dataset: Dataset?
     var itemsViewController: ItemsViewControllerProtocol?
     var descriptorsViewController: DescriptorsViewControllerProtocol?
+    var descriptionsViewController: DescriptionsViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +70,8 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
     private func setupControllers() {
         if let viewControllers = self.viewControllers {
             let itemViewController = viewControllers[1] as! ItemsNavigationController
-            itemViewController.datasource = self
+            itemViewController.itemsDatasource = self
+            itemViewController.descriptorsDatasource = self
             
             let descriptorViewController = viewControllers[2] as! DescriptorsNavigationController
             descriptorViewController.datasource = self
@@ -77,11 +79,12 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
             let descriptionsViewController = viewControllers[3] as! DescriptionsViewController
             descriptionsViewController.itemsDatasource = self
             descriptionsViewController.descriptorsDatasource = self
+            self.descriptionsViewController = descriptionsViewController
         }
     }
     
     private func loadSampleData() {
-        let sampleFilePath = NSBundle.mainBundle().pathForResource("corals", ofType: "sdd.xml")
+        let sampleFilePath = NSBundle.mainBundle().pathForResource("genetta", ofType: "sdd.xml")
         let sampleFileData = NSData(contentsOfFile: sampleFilePath!)
         
         let parser = SddNSXMLParser()
