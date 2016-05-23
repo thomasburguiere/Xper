@@ -44,8 +44,6 @@ class ItemDescriptionViewController: UITableViewController {
     }
     
     
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -100,5 +98,22 @@ class ItemDescriptionViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let descriptorKey = descriptorKeys![indexPath.section]
+        if isEditMode {
+            if descriptorKey.isCategorical {
+                let selectedState = (descriptorKey as! CategoricalDescriptor).states.sort(stateNameSortFunction)[indexPath.row]
+                let des = item?.itemDescription?.descriptionElements[descriptorKey]
+                let selectedStateContainedInDES = (des?.selectedStates.contains({$0 === selectedState}))!
+                if selectedStateContainedInDES {
+                    des?.selectedStates.removeAtIndex(des!.selectedStates.indexOf({$0 === selectedState})!)
+                } else {
+                    des?.selectedStates.append(selectedState)
+                }
+            }
+        }
     }
 }
