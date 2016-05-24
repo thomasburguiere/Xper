@@ -89,7 +89,7 @@ class ItemDescriptionViewController: UITableViewController {
             else {
                 let states = (descriptorKey as! CategoricalDescriptor).states.sort(stateNameSortFunction)
                 let currentState = states[indexPath.row]
-                let isStateSelected = (selectedStates?.contains({$0 === currentState}))!
+                let isStateSelected = (selectedStates?.contains(currentState))!
                 cell.objectName.text = isStateSelected ? "✓ " + currentState.name! : "  " + currentState.name!
             }
         } else {
@@ -107,9 +107,9 @@ class ItemDescriptionViewController: UITableViewController {
             if descriptorKey.isCategorical {
                 let selectedState = (descriptorKey as! CategoricalDescriptor).states.sort(stateNameSortFunction)[indexPath.row]
                 let des = item?.itemDescription?.descriptionElements[descriptorKey]
-                let selectedStateContainedInDES = (des?.selectedStates.contains({$0 === selectedState}))!
+                let selectedStateContainedInDES = (des?.selectedStates.contains(selectedState))!
                 if selectedStateContainedInDES {
-                    des?.selectedStates.removeAtIndex(des!.selectedStates.indexOf({$0 === selectedState})!)
+                    des?.selectedStates.removeAtIndex(des!.selectedStates.indexOf(selectedState)!)
                 } else {
                     des?.selectedStates.append(selectedState)
                 }
