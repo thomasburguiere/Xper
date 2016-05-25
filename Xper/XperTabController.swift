@@ -9,7 +9,7 @@
 import UIKit
 import XperFramework
 
-class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDatasource, DescriptorsDatasource {
+class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDatasource, DescriptorsDatasource, MainInfoDatasource {
     
     var dataset: Dataset?
     var itemsViewController: ItemsViewControllerProtocol?
@@ -38,6 +38,17 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
         descriptorsViewController?.reload()
     }
     
+    // MARK: MainInfoDataSource
+    func getItemsCount() -> Int? {
+        return dataset?.items.count
+    }
+    func getDescriptorsCount() -> Int? {
+        return dataset?.descriptors.count
+    }
+    func getDatasetName() -> String? {
+        return dataset?.name
+    }
+    
     // MARK: ItemsDatasource
     func getItems() -> [Item]? {
         return dataset?.items
@@ -63,6 +74,7 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
             let mainViewController = viewControllers[0] as! MainViewController
             mainViewController.dataset = self.dataset
             mainViewController.delegate = self
+            mainViewController.datasource = self
         }
     }
     

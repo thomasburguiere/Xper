@@ -17,6 +17,7 @@ class MainViewController : UIViewController {
     var data = NSMutableData()
     
     var delegate: MainViewControllerDelegate?
+    var datasource: MainInfoDatasource?
     
     @IBOutlet weak var datasetLabel: UILabel!
     @IBOutlet weak var itemsLabel: UILabel!
@@ -44,10 +45,10 @@ class MainViewController : UIViewController {
         
     }
     func displayDatasetData() {
-        if let dataset = self.dataset {
-            datasetLabel.text = dataset.name
-            itemsLabel.text = String(dataset.items.count)
-            descriptorsLabel.text = String(dataset.descriptors.count)
+        if let datasource = self.datasource {
+            datasetLabel.text = datasource.getDatasetName()
+            itemsLabel.text = String(datasource.getItemsCount()!)
+            descriptorsLabel.text = String(datasource.getDescriptorsCount()!)
         }
     }
     
@@ -74,8 +75,8 @@ class MainViewController : UIViewController {
                 if httpResponse.statusCode == 200 {
                     let parser = SddNSXMLParser()
                     self.dataset = parser.parseDataset(data)
-                    self.displayDatasetData()
                     self.delegate?.mainViewController(self, didLoadDataset: self.dataset!)
+                    self.displayDatasetData()
                 }
             }
         }

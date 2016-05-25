@@ -38,6 +38,7 @@
 		E9ECC49F1C921864002833FF /* XperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC49E1C921864002833FF /* XperTests.swift */; };
 		E9ECC4AA1C921864002833FF /* XperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4A91C921864002833FF /* XperUITests.swift */; };
 		E9ED24BB1CCD416A002C9317 /* XperFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9ED24BA1CCD416A002C9317 /* XperFramework.framework */; };
+		E9F3DE761CF66C9C003E7D71 /* MainInfoDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3DE751CF66C9C003E7D71 /* MainInfoDatasource.swift */; };
 		E9F566EB1CDA916D0029D745 /* corals.sdd.xml in Resources */ = {isa = PBXBuildFile; fileRef = E9F566EA1CDA916D0029D745 /* corals.sdd.xml */; };
 		E9F566ED1CDA92E50029D745 /* Agrume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F566EC1CDA92E50029D745 /* Agrume.framework */; };
 		E9F566EF1CDA987C0029D745 /* MapleBacon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F566EE1CDA987C0029D745 /* MapleBacon.framework */; };
@@ -99,6 +100,7 @@
 		E9ECC4A91C921864002833FF /* XperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperUITests.swift; sourceTree = "<group>"; };
 		E9ECC4AB1C921864002833FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9ED24BA1CCD416A002C9317 /* XperFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XperFramework.framework; path = Carthage/Build/iOS/XperFramework.framework; sourceTree = "<group>"; };
+		E9F3DE751CF66C9C003E7D71 /* MainInfoDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInfoDatasource.swift; sourceTree = "<group>"; };
 		E9F566EA1CDA916D0029D745 /* corals.sdd.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = corals.sdd.xml; sourceTree = "<group>"; };
 		E9F566EC1CDA92E50029D745 /* Agrume.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agrume.framework; path = Carthage/Build/iOS/Agrume.framework; sourceTree = "<group>"; };
 		E9F566EE1CDA987C0029D745 /* MapleBacon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapleBacon.framework; path = Carthage/Build/iOS/MapleBacon.framework; sourceTree = "<group>"; };
@@ -173,8 +175,9 @@
 		E9E4F88B1CE1EE10001C03A5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */,
 				E9E4F88C1CE1EE22001C03A5 /* MainViewController.swift */,
+				E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */,
+				E9F3DE751CF66C9C003E7D71 /* MainInfoDatasource.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			files = (
 				E956ADF01CD83C4300E0E0EE /* DescriptorDetailViewController.swift in Sources */,
 				E968CC031CD942790014F222 /* DatasetObjectTableViewCell.swift in Sources */,
+				E9F3DE761CF66C9C003E7D71 /* MainInfoDatasource.swift in Sources */,
 				E9CC6B591CD6E7030091B4B2 /* ItemDetailViewController.swift in Sources */,
 				E927D0D11CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */,
 				E9A2D5B51CE404DE00A1D49A /* MainViewControllerDelegate.swift in Sources */,
