@@ -36,7 +36,6 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
         self.dataset = dataset
         itemsViewController?.reload()
         descriptorsViewController?.reload()
-        setupControllers()
     }
     
     // MARK: ItemsDatasource
