@@ -67,16 +67,17 @@ class MainViewController : UIViewController {
             // 6
             dispatch_async(dispatch_get_main_queue()) {
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-            }
-            // 7
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let httpResponse = response as? NSHTTPURLResponse {
-                if httpResponse.statusCode == 200 {
-                    let parser = SddNSXMLParser()
-                    self.dataset = parser.parseDataset(data)
-                    self.delegate?.mainViewController(self, didLoadDataset: self.dataset!)
-                    self.displayDatasetData()
+                
+                // 7
+                if let error = error {
+                    print(error.localizedDescription)
+                } else if let httpResponse = response as? NSHTTPURLResponse {
+                    if httpResponse.statusCode == 200 {
+                        let parser = SddNSXMLParser()
+                        self.dataset = parser.parseDataset(data)
+                        self.delegate?.mainViewController(self, didLoadDataset: self.dataset!)
+                        self.displayDatasetData()
+                    }
                 }
             }
         }
@@ -84,7 +85,7 @@ class MainViewController : UIViewController {
         dataTask?.resume()
     }
     
-
+    
     
     
     override func didReceiveMemoryWarning() {
