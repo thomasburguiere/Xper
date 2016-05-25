@@ -81,16 +81,9 @@ class MainViewController : UIViewController {
         }
         // 8
         dataTask?.resume()
-        
-    }
-    func connection(connection: NSURLConnection!, didReceiveData data: NSData!){
-        self.data.appendData(data)
     }
     
-    func connectionDidFinishLoading(connection: NSURLConnection!)  {
-        let parser = SddNSXMLParser()
-        dataset = parser.parseDataset(self.data)
-    }
+
     
     
     override func didReceiveMemoryWarning() {
