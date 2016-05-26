@@ -9,7 +9,7 @@
 import UIKit
 import XperFramework
 
-class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDatasource, DescriptorsDatasource, MainInfoDatasource {
+class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasource, DatasetLoaderDelegate, MainInfoDatasource {
     
     var dataset: Dataset?
     var itemsViewController: ItemsViewControllerProtocol?
@@ -19,25 +19,22 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        loadSampleData()
+        if let fileToOpenUrl = XperSingleton.sharedInstance.fileToOpenURL {
+            loadOpenedData(fileToOpenUrl)
+        } else {
+            loadSampleData()
+        }
         
-        setupMainViewController()
+        XperSingleton.sharedInstance.datasetLoader.delegate = self
         setupControllers()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    // MARK: MainViewControllerDelegate
-    func mainViewController(mainViewController: MainViewController, didLoadDataset dataset: Dataset) {
-        self.dataset = dataset
-        itemsViewController?.reload()
-        descriptorsViewController?.reload()
-    }
-    
+   
     // MARK: MainInfoDataSource
     func getItemsCount() -> Int? {
         return dataset?.items.count
@@ -47,6 +44,15 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
     }
     func getDatasetName() -> String? {
         return dataset?.name
+    }
+    
+    // MARK: DatasetLoaderDelegate
+    func datasetLoader(datasetLoader: DatasetLoader, didLoadDataset dataset: Dataset) {
+        self.dataset = dataset
+        itemsViewController?.reload()
+        descriptorsViewController?.reload()
+        let mainViewController = self.viewControllers![0] as! MainViewController
+        mainViewController.displayDatasetData()
     }
     
     // MARK: ItemsDatasource
@@ -69,17 +75,12 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
     
     
     // MARK: private functions
-    private func setupMainViewController() {
-        if let viewControllers = self.viewControllers {
-            let mainViewController = viewControllers[0] as! MainViewController
-            mainViewController.dataset = self.dataset
-            mainViewController.delegate = self
-            mainViewController.datasource = self
-        }
-    }
     
     private func setupControllers() {
         if let viewControllers = self.viewControllers {
+            let mainViewController = viewControllers[0] as! MainViewController
+            mainViewController.datasource = self
+            
             let itemViewController = viewControllers[1] as! ItemsNavigationController
             itemViewController.itemsDatasource = self
             itemViewController.descriptorsDatasource = self
@@ -92,6 +93,12 @@ class XperTabController: UITabBarController, MainViewControllerDelegate, ItemsDa
             descriptionsViewController.descriptorsDatasource = self
             self.descriptionsViewController = descriptionsViewController
         }
+    }
+    
+    private func loadOpenedData(openedFileUrl: NSURL) {
+        let sampleFileData = NSData(contentsOfURL: openedFileUrl)
+        let parser = SddNSXMLParser()
+        dataset = parser.parseDataset(sampleFileData)
     }
     
     private func loadSampleData() {

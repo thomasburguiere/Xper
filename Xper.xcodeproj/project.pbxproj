@@ -22,7 +22,6 @@
 		E961A2381CF2DC500038049D /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E961A2371CF2DC500038049D /* DescriptionTableViewCell.swift */; };
 		E961A23A1CF2E89D0038049D /* genetta.sdd.xml in Resources */ = {isa = PBXBuildFile; fileRef = E961A2391CF2E89D0038049D /* genetta.sdd.xml */; };
 		E968CC031CD942790014F222 /* DatasetObjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */; };
-		E9A2D5B51CE404DE00A1D49A /* MainViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */; };
 		E9A2D5B71CE40BCD00A1D49A /* ItemsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D5B61CE40BCD00A1D49A /* ItemsDatasource.swift */; };
 		E9A2D5B91CE4148400A1D49A /* DescriptorsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2D5B81CE4148400A1D49A /* DescriptorsDatasource.swift */; };
 		E9AE92041CE5B8FD00F4DA4C /* DBChooser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E9AE92021CE5B8FD00F4DA4C /* DBChooser.bundle */; };
@@ -38,6 +37,9 @@
 		E9ECC49F1C921864002833FF /* XperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC49E1C921864002833FF /* XperTests.swift */; };
 		E9ECC4AA1C921864002833FF /* XperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ECC4A91C921864002833FF /* XperUITests.swift */; };
 		E9ED24BB1CCD416A002C9317 /* XperFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9ED24BA1CCD416A002C9317 /* XperFramework.framework */; };
+		E9F3DE6F1CF65E5F003E7D71 /* XperSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3DE6E1CF65E5F003E7D71 /* XperSingleton.swift */; };
+		E9F3DE721CF6624E003E7D71 /* DatasetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3DE711CF6624E003E7D71 /* DatasetLoader.swift */; };
+		E9F3DE741CF666AF003E7D71 /* DatasetLoaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3DE731CF666AF003E7D71 /* DatasetLoaderDelegate.swift */; };
 		E9F3DE761CF66C9C003E7D71 /* MainInfoDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3DE751CF66C9C003E7D71 /* MainInfoDatasource.swift */; };
 		E9F566EB1CDA916D0029D745 /* corals.sdd.xml in Resources */ = {isa = PBXBuildFile; fileRef = E9F566EA1CDA916D0029D745 /* corals.sdd.xml */; };
 		E9F566ED1CDA92E50029D745 /* Agrume.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F566EC1CDA92E50029D745 /* Agrume.framework */; };
@@ -78,7 +80,6 @@
 		E961A2371CF2DC500038049D /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		E961A2391CF2E89D0038049D /* genetta.sdd.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = genetta.sdd.xml; sourceTree = "<group>"; };
 		E968CC021CD942790014F222 /* DatasetObjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetObjectTableViewCell.swift; sourceTree = "<group>"; };
-		E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewControllerDelegate.swift; sourceTree = "<group>"; };
 		E9A2D5B61CE40BCD00A1D49A /* ItemsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsDatasource.swift; sourceTree = "<group>"; };
 		E9A2D5B81CE4148400A1D49A /* DescriptorsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptorsDatasource.swift; sourceTree = "<group>"; };
 		E9AE92021CE5B8FD00F4DA4C /* DBChooser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DBChooser.bundle; sourceTree = "<group>"; };
@@ -100,6 +101,9 @@
 		E9ECC4A91C921864002833FF /* XperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XperUITests.swift; sourceTree = "<group>"; };
 		E9ECC4AB1C921864002833FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9ED24BA1CCD416A002C9317 /* XperFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XperFramework.framework; path = Carthage/Build/iOS/XperFramework.framework; sourceTree = "<group>"; };
+		E9F3DE6E1CF65E5F003E7D71 /* XperSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XperSingleton.swift; sourceTree = "<group>"; };
+		E9F3DE711CF6624E003E7D71 /* DatasetLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetLoader.swift; sourceTree = "<group>"; };
+		E9F3DE731CF666AF003E7D71 /* DatasetLoaderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatasetLoaderDelegate.swift; sourceTree = "<group>"; };
 		E9F3DE751CF66C9C003E7D71 /* MainInfoDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInfoDatasource.swift; sourceTree = "<group>"; };
 		E9F566EA1CDA916D0029D745 /* corals.sdd.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = corals.sdd.xml; sourceTree = "<group>"; };
 		E9F566EC1CDA92E50029D745 /* Agrume.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Agrume.framework; path = Carthage/Build/iOS/Agrume.framework; sourceTree = "<group>"; };
@@ -176,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				E9E4F88C1CE1EE22001C03A5 /* MainViewController.swift */,
-				E9A2D5B41CE404DE00A1D49A /* MainViewControllerDelegate.swift */,
 				E9F3DE751CF66C9C003E7D71 /* MainInfoDatasource.swift */,
 			);
 			path = Main;
@@ -210,8 +213,10 @@
 			isa = PBXGroup;
 			children = (
 				E9ECC4891C921864002833FF /* AppDelegate.swift */,
+				E9F3DE6E1CF65E5F003E7D71 /* XperSingleton.swift */,
 				E9ECC4901C921864002833FF /* Assets.xcassets */,
 				E9ECC48B1C921864002833FF /* XperTabController.swift */,
+				E9F3DE701CF6622F003E7D71 /* IO */,
 				E9E4F88B1CE1EE10001C03A5 /* Main */,
 				E976E9E71CDB372100060E7A /* Items */,
 				E976E9E81CDB372F00060E7A /* Descriptors */,
@@ -245,6 +250,15 @@
 				E9ECC4A91C921864002833FF /* XperUITests.swift */,
 			);
 			path = XperUITests;
+			sourceTree = "<group>";
+		};
+		E9F3DE701CF6622F003E7D71 /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				E9F3DE711CF6624E003E7D71 /* DatasetLoader.swift */,
+				E9F3DE731CF666AF003E7D71 /* DatasetLoaderDelegate.swift */,
+			);
+			name = IO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,8 +423,8 @@
 				E9F3DE761CF66C9C003E7D71 /* MainInfoDatasource.swift in Sources */,
 				E9CC6B591CD6E7030091B4B2 /* ItemDetailViewController.swift in Sources */,
 				E927D0D11CD69E6B00E658B5 /* DescriptorsTableViewController.swift in Sources */,
-				E9A2D5B51CE404DE00A1D49A /* MainViewControllerDelegate.swift in Sources */,
 				E92F6D391CDFE26400EFA2BC /* ItemDescriptionViewController.swift in Sources */,
+				E9F3DE741CF666AF003E7D71 /* DatasetLoaderDelegate.swift in Sources */,
 				E927D0C71CD682EF00E658B5 /* DescriptionsViewController.swift in Sources */,
 				E93B99941CEF614500B64385 /* DescriptorsViewController.swift in Sources */,
 				E956ADEE1CD8385600E0E0EE /* DescriptorsNavigationController.swift in Sources */,
@@ -421,10 +435,12 @@
 				E927D0D41CD6A17300E658B5 /* Misc.swift in Sources */,
 				E9A2D5B91CE4148400A1D49A /* DescriptorsDatasource.swift in Sources */,
 				E93B99921CEF60D600B64385 /* ItemsViewControllerProtocol.swift in Sources */,
+				E9F3DE721CF6624E003E7D71 /* DatasetLoader.swift in Sources */,
 				E9CC6B571CD6E04A0091B4B2 /* ItemsNavigationController.swift in Sources */,
 				E91BB29D1CCE9C5E001D82FA /* README.md in Sources */,
 				E927D0C91CD6830C00E658B5 /* IdentificationViewController.swift in Sources */,
 				E961A2381CF2DC500038049D /* DescriptionTableViewCell.swift in Sources */,
+				E9F3DE6F1CF65E5F003E7D71 /* XperSingleton.swift in Sources */,
 				E9ECC48A1C921864002833FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
