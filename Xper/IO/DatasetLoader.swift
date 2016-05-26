@@ -25,7 +25,7 @@ class DatasetLoader {
         }
     }
     
-    func loadDatasetFromRemoteUrlString(urlString: String) {
+    func loadDatasetFromRemoteUrl(url: NSURL?) {
         
         var dataset: Dataset?
         // 1
@@ -41,7 +41,6 @@ class DatasetLoader {
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
-        let url = NSURL(string: urlString)
         // 5
         dataTask = defaultSession.dataTaskWithURL(url!) {
             data, response, error in

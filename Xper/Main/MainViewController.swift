@@ -22,13 +22,14 @@ class MainViewController : UIViewController {
     
     
     @IBAction func loadGenetDataset(sender: AnyObject) {
-        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrlString("https://www.dropbox.com/s/tr7kon3uc4b7tpq/genetta.sdd.xml?dl=1")
+        
+        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrl(NSURL(string: "https://www.dropbox.com/s/tr7kon3uc4b7tpq/genetta.sdd.xml?dl=1"))
     }
     @IBAction func loadCoralsDataset(sender: AnyObject) {
-        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrlString("https://www.dropbox.com/s/4nxgh06lkaklpdq/corals.sdd.xml?dl=1")
+        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrl(NSURL(string: "https://www.dropbox.com/s/4nxgh06lkaklpdq/corals.sdd.xml?dl=1"))
     }
     @IBAction func loadCichoDataset(sender: AnyObject) {
-        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrlString("https://www.dropbox.com/s/byjmovgiaftn6e1/cichorieae.sdd.xml?dl=1")
+        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrl(NSURL(string: "https://www.dropbox.com/s/byjmovgiaftn6e1/cichorieae.sdd.xml?dl=1"))
     }
     override func viewDidLoad() {
         super.viewDidLoad()
