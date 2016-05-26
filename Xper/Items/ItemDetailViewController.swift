@@ -32,9 +32,11 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
         
         if let item = item {
             navigationItem.title = item.name
-            let detailString = item.detail
-            itemDetailText.setHTMLFromString(detailString!)
-            
+            if let detailString = item.detail {
+                itemDetailText.setHTMLFromString(detailString)
+            } else {
+                itemDetailText.setHTMLFromString("")
+            }
             let imageResource = item.resources.filter{$0.type == .Image}.first
             if imageResource != nil {
                 if let imageURL = imageResource?.url {

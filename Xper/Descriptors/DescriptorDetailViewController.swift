@@ -22,6 +22,8 @@ class DescriptorDetailViewController: UIViewController, UINavigationControllerDe
             navigationItem.title = descriptor.name
             if let detailString = descriptor.detail {
                 descriptorDetailText.setHTMLFromString(detailString)
+            } else {
+                descriptorDetailText.setHTMLFromString("")
             }
         }
         descriptorStatesTableView.dataSource = self
