@@ -116,6 +116,11 @@ SWIFT_CLASS("_TtC6Agrume6Agrume")
 - (void)reload;
 @end
 
+
+@interface Agrume (SWIFT_EXTENSION(Agrume))
+- (UIStatusBarStyle)preferredStatusBarStyle;
+@end
+
 @class UICollectionView;
 @class UICollectionViewCell;
 @class NSIndexPath;
