@@ -104,7 +104,14 @@ class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasou
     private func loadSampleData() {
         let sampleFilePath = NSBundle.mainBundle().pathForResource("genetta", ofType: "sdd.xml")
         let sampleFileData = NSData(contentsOfFile: sampleFilePath!)
-        
+        let filePath = (NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String) + "/" + "genetta.sdd"
+        do {
+            try sampleFileData?.writeToFile(filePath, options: .AtomicWrite)
+            XperSingleton.sharedInstance.datasetsPathsDictionnary["genetta"] = sampleFilePath
+        }
+        catch  {
+            
+        }
         let parser = SddNSXMLParser()
         dataset = parser.parseDataset(sampleFileData)
     }

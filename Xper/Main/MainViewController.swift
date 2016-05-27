@@ -12,7 +12,7 @@ import Foundation
 import UIKit
 import XperFramework
 
-class MainViewController : UIViewController {
+class MainViewController : UIViewController,  UITableViewDataSource, UITableViewDelegate  {
     
     var datasource: MainInfoDatasource?
     
@@ -20,24 +20,21 @@ class MainViewController : UIViewController {
     @IBOutlet weak var itemsLabel: UILabel!
     @IBOutlet weak var descriptorsLabel: UILabel!
     
+    var datasetNameKeys: [String] {
+        return Array(XperSingleton.sharedInstance.datasetsPathsDictionnary.keys)
+    }
+    @IBOutlet weak var savedDatasetsTable: UITableView!
     
-    @IBAction func loadGenetDataset(sender: AnyObject) {
-        
-        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrl(NSURL(string: "https://www.dropbox.com/s/tr7kon3uc4b7tpq/genetta.sdd.xml?dl=1"))
-    }
-    @IBAction func loadCoralsDataset(sender: AnyObject) {
-        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrl(NSURL(string: "https://www.dropbox.com/s/4nxgh06lkaklpdq/corals.sdd.xml?dl=1"))
-    }
-    @IBAction func loadCichoDataset(sender: AnyObject) {
-        XperSingleton.sharedInstance.datasetLoader.loadDatasetFromRemoteUrl(NSURL(string: "https://www.dropbox.com/s/byjmovgiaftn6e1/cichorieae.sdd.xml?dl=1"))
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         displayDatasetData()
+        savedDatasetsTable.dataSource = self
+        savedDatasetsTable.delegate = self
         
     }
     func displayDatasetData() {
+        savedDatasetsTable.reloadData()
         if let datasource = self.datasource {
             datasetLabel.text = datasource.getDatasetName()
             itemsLabel.text = String(datasource.getItemsCount()!)
@@ -45,7 +42,26 @@ class MainViewController : UIViewController {
         }
     }
     
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - Table view data source functions
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return XperSingleton.sharedInstance.datasetsPathsDictionnary.keys.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("savedDatasetCell")as! DatasetObjectTableViewCell
+        let datasetName = datasetNameKeys[indexPath.row]
+        cell.objectName?.text = datasetName
+        
+        return cell
     }
 }

@@ -23,12 +23,14 @@ class DatasetLoader {
         let fileData = NSData(contentsOfURL: url)
         let parser = SddNSXMLParser()
         if let dataset = parser.parseDataset(fileData) {
+            // writing dataset to disk, and saving a ref
+            let datasetFileName = dataset.name! + ".sdd"
+            self.saveDatasetToDisk(fileData, withName: datasetFileName)
+            
             // loading dataset in UI
             self.delegate?.datasetLoader(self, didLoadDataset: dataset)
             
-            // writing dataset to disk, and saving a ref
-            let datasetFileName = dataset.name! + ".sdd"
-            self.saveDatasetToDisk(fileData, withName: datasetFileName)        }
+        }
     }
     
     func loadDatasetFromRemoteUrl(url: NSURL?) {
