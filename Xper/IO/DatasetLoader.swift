@@ -15,19 +15,24 @@ import XperFramework
 class DatasetLoader {
     
     var delegate: DatasetLoaderDelegate?
-    
+    var documentsPath: String {
+        return  NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+    }
     
     func loadDatasetDataFromLoadedUrl(url: NSURL) {
         let fileData = NSData(contentsOfURL: url)
         let parser = SddNSXMLParser()
         if let dataset = parser.parseDataset(fileData) {
-            delegate?.datasetLoader(self, didLoadDataset: dataset)
-        }
+            // loading dataset in UI
+            self.delegate?.datasetLoader(self, didLoadDataset: dataset)
+            
+            // writing dataset to disk, and saving a ref
+            let datasetFileName = dataset.name! + ".sdd"
+            self.saveDatasetToDisk(fileData, withName: datasetFileName)        }
     }
     
     func loadDatasetFromRemoteUrl(url: NSURL?) {
         
-        var dataset: Dataset?
         // 1
         let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         // 2
@@ -54,14 +59,33 @@ class DatasetLoader {
                 } else if let httpResponse = response as? NSHTTPURLResponse {
                     if httpResponse.statusCode == 200 {
                         let parser = SddNSXMLParser()
-                        dataset = parser.parseDataset(data)
-                        self.delegate?.datasetLoader(self, didLoadDataset: dataset!)
+                        if let dataset = parser.parseDataset(data) {
+                            
+                            // loading dataset in UI
+                            self.delegate?.datasetLoader(self, didLoadDataset: dataset)
+                            
+                            // writing dataset to disk, and saving a ref
+                            let datasetFileName = dataset.name! + ".sdd"
+                            self.saveDatasetToDisk(data, withName: datasetFileName)
+                            
+                        }
                     }
                 }
             }
         }
         // 8
         dataTask?.resume()
+    }
+    
+    private func saveDatasetToDisk(data: NSData?, withName datasetFileName: String) {
+        let datasetFilePath = self.documentsPath + "/" + datasetFileName
+        do {
+            try data?.writeToFile(datasetFilePath, options: .AtomicWrite)
+            XperSingleton.sharedInstance.datasetsPathsDictionnary[datasetFileName] = datasetFilePath
+        }
+        catch  {
+            
+        }
     }
 
 }

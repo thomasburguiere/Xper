@@ -14,5 +14,6 @@ class XperSingleton {
     
     var fileToOpenURL: NSURL?
     var datasetLoader = DatasetLoader()
+    var datasetsPathsDictionnary = [String:String]()
     
 }
