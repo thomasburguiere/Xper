@@ -126,6 +126,12 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="72" width="360" height="234"/>
+                                </variation>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="72" width="760" height="234"/>
+                                </variation>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26z-et-dfk">
                                 <rect key="frame" x="210" y="314" width="180" height="180"/>
@@ -411,7 +417,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOz-ec-M3X">
-                                                <rect key="frame" x="174" y="78" width="98" height="21"/>
+                                                <rect key="frame" x="174" y="77" width="98" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="98" id="eJv-KN-j2X"/>
                                                 </constraints>
@@ -420,7 +426,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descriptors:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cJ-UP-ujR">
-                                                <rect key="frame" x="63" y="78" width="102" height="21"/>
+                                                <rect key="frame" x="63" y="77" width="102" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.56470588239999997" green="0.76862745099999996" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -435,7 +441,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VT2-1i-BVh">
-                                                <rect key="frame" x="174" y="49" width="98" height="22"/>
+                                                <rect key="frame" x="174" y="49" width="98" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="98" id="BWI-lj-zJL"/>
                                                 </constraints>
@@ -444,7 +450,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOg-fc-Pvu">
-                                                <rect key="frame" x="111" y="49" width="55" height="22"/>
+                                                <rect key="frame" x="111" y="49" width="55" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="55" id="Wno-gI-Doq"/>
                                                 </constraints>
@@ -494,7 +500,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRk-gQ-g26">
                                                     <rect key="frame" x="8" y="8" width="544" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -504,6 +510,14 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wyd-PK-5ak"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="146" width="360" height="396"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="VqB-hR-Ru2" id="8pA-4F-5x1"/>
                                     <outlet property="delegate" destination="VqB-hR-Ru2" id="hRx-RU-QeZ"/>
