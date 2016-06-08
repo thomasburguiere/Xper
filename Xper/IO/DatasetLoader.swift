@@ -18,6 +18,16 @@ class DatasetLoader {
     var documentsPath: String {
         return  NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first! as String
     }
+
+    func listExistingDatasets() {
+        let fileManager = NSFileManager.defaultManager()
+        let enumerator = fileManager.enumeratorAtPath(documentsPath)
+        while let element = enumerator?.nextObject() as? String {
+            if element.hasSuffix("sdd") { // checks the extension
+                print (element)
+            }
+        }
+    }
     
     func loadExistingDataset(named datasetName: String) {
         if let datasetPath = XperSingleton.instance.datasetsPathsDictionnary[datasetName] {
@@ -30,7 +40,6 @@ class DatasetLoader {
                 self.delegate?.datasetLoader(self, didLoadDataset: dataset)
             }
         }
-        
     }
     
     func loadDatasetDataFromLoadedUrl(url: NSURL) {
