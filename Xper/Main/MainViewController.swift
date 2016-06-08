@@ -64,4 +64,12 @@ class MainViewController : UIViewController,  UITableViewDataSource, UITableView
         
         return cell
     }
+    
+    // MARK: - Table view delegate functions
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let datasetName = datasetNameKeys[indexPath.row]
+        XperSingleton.instance.datasetLoader.loadExistingDataset(named: datasetName)
+        
+    }
 }

@@ -19,6 +19,20 @@ class DatasetLoader {
         return  NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
     }
     
+    func loadExistingDataset(named datasetName: String) {
+        if let datasetPath = XperSingleton.instance.datasetsPathsDictionnary[datasetName] {
+            let fileData = NSData(contentsOfURL: NSURL(fileURLWithPath: datasetPath))
+            
+            let parser = SddNSXMLParser()
+            
+            if let dataset = parser.parseDataset(fileData) {
+                // loading dataset in UI
+                self.delegate?.datasetLoader(self, didLoadDataset: dataset)
+            }
+        }
+        
+    }
+    
     func loadDatasetDataFromLoadedUrl(url: NSURL) {
         let fileData = NSData(contentsOfURL: url)
         let parser = SddNSXMLParser()
