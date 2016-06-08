@@ -21,7 +21,7 @@ class MainViewController : UIViewController,  UITableViewDataSource, UITableView
     @IBOutlet weak var descriptorsLabel: UILabel!
     
     var datasetNameKeys: [String] {
-        return Array(XperSingleton.sharedInstance.datasetsPathsDictionnary.keys)
+        return Array(XperSingleton.instance.datasetsPathsDictionnary.keys)
     }
     @IBOutlet weak var savedDatasetsTable: UITableView!
     
@@ -54,7 +54,7 @@ class MainViewController : UIViewController,  UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return XperSingleton.sharedInstance.datasetsPathsDictionnary.keys.count
+        return XperSingleton.instance.datasetsPathsDictionnary.keys.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

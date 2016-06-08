@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        XperSingleton.sharedInstance.fileToOpenURL = url
-        XperSingleton.sharedInstance.datasetLoader.loadDatasetDataFromLoadedUrl(url)
+        XperSingleton.instance.fileToOpenURL = url
+        XperSingleton.instance.datasetLoader.loadDatasetDataFromLoadedUrl(url)
         return true
     }
 

@@ -19,13 +19,13 @@ class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasou
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let fileToOpenUrl = XperSingleton.sharedInstance.fileToOpenURL {
+        if let fileToOpenUrl = XperSingleton.instance.fileToOpenURL {
             loadOpenedData(fileToOpenUrl)
         } else {
             loadSampleData()
         }
         
-        XperSingleton.sharedInstance.datasetLoader.delegate = self
+        XperSingleton.instance.datasetLoader.delegate = self
         setupControllers()
     }
     
@@ -107,7 +107,7 @@ class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasou
         let filePath = (NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String) + "/" + "genetta.sdd"
         do {
             try sampleFileData?.writeToFile(filePath, options: .AtomicWrite)
-            XperSingleton.sharedInstance.datasetsPathsDictionnary["genetta"] = sampleFilePath
+            XperSingleton.instance.datasetsPathsDictionnary["genetta"] = sampleFilePath
         }
         catch  {
             

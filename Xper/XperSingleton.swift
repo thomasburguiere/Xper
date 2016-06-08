@@ -10,7 +10,7 @@ import Foundation
 
 class XperSingleton {
     
-    static let sharedInstance = XperSingleton()
+    static let instance = XperSingleton()
     
     var fileToOpenURL: NSURL?
     var datasetLoader = DatasetLoader()

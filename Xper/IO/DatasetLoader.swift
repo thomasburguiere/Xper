@@ -83,7 +83,7 @@ class DatasetLoader {
         let datasetFilePath = self.documentsPath + "/" + datasetFileName
         do {
             try data?.writeToFile(datasetFilePath, options: .AtomicWrite)
-            XperSingleton.sharedInstance.datasetsPathsDictionnary[datasetFileName] = datasetFilePath
+            XperSingleton.instance.datasetsPathsDictionnary[datasetFileName] = datasetFilePath
         }
         catch  {
             
