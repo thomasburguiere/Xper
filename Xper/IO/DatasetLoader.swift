@@ -16,7 +16,7 @@ class DatasetLoader {
     
     var delegate: DatasetLoaderDelegate?
     var documentsPath: String {
-        return  NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        return  NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first! as String
     }
     
     func loadExistingDataset(named datasetName: String) {
