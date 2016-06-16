@@ -16,12 +16,12 @@ class DatasetLoader {
     
     var delegate: DatasetLoaderDelegate?
     var documentsPath: String {
-        return  NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first! as String
+        return  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
     }
 
     func listExistingDatasets() {
-        let fileManager = NSFileManager.defaultManager()
-        let enumerator = fileManager.enumeratorAtPath(documentsPath)
+        let fileManager = FileManager.default()
+        let enumerator = fileManager.enumerator(atPath: documentsPath)
         while let element = enumerator?.nextObject() as? String {
             if element.hasSuffix("sdd") { // checks the extension
                 print (element)
@@ -31,7 +31,7 @@ class DatasetLoader {
     
     func loadExistingDataset(named datasetName: String) {
         if let datasetPath = XperSingleton.instance.datasetsPathsDictionnary[datasetName] {
-            let fileData = NSData(contentsOfURL: NSURL(fileURLWithPath: datasetPath))
+            let fileData = try? Data(contentsOf: URL(fileURLWithPath: datasetPath))
             
             let parser = SddNSXMLParser()
             
@@ -42,8 +42,8 @@ class DatasetLoader {
         }
     }
     
-    func loadDatasetDataFromLoadedUrl(url: NSURL) {
-        let fileData = NSData(contentsOfURL: url)
+    func loadDatasetDataFromLoadedUrl(_ url: URL) {
+        let fileData = try? Data(contentsOf: url)
         let parser = SddNSXMLParser()
         if let dataset = parser.parseDataset(fileData) {
             // writing dataset to disk, and saving a ref
@@ -56,12 +56,12 @@ class DatasetLoader {
         }
     }
     
-    func loadDatasetFromRemoteUrl(url: NSURL?) {
+    func loadDatasetFromRemoteUrl(_ url: URL?) {
         
         // 1
-        let defaultSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        let defaultSession = URLSession(configuration: URLSessionConfiguration.default())
         // 2
-        var dataTask: NSURLSessionDataTask?
+        var dataTask: URLSessionDataTask?
         
 
         
@@ -69,19 +69,19 @@ class DatasetLoader {
             dataTask?.cancel()
         }
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.shared().isNetworkActivityIndicatorVisible = true
         
         // 5
-        dataTask = defaultSession.dataTaskWithURL(url!) {
+        dataTask = defaultSession.dataTask(with: url!) {
             data, response, error in
             // 6
-            dispatch_async(dispatch_get_main_queue()) {
-                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            DispatchQueue.main.async {
+                UIApplication.shared().isNetworkActivityIndicatorVisible = false
                 
                 // 7
                 if let error = error {
                     print(error.localizedDescription)
-                } else if let httpResponse = response as? NSHTTPURLResponse {
+                } else if let httpResponse = response as? HTTPURLResponse {
                     if httpResponse.statusCode == 200 {
                         let parser = SddNSXMLParser()
                         if let dataset = parser.parseDataset(data) {
@@ -102,10 +102,10 @@ class DatasetLoader {
         dataTask?.resume()
     }
     
-    private func saveDatasetToDisk(data: NSData?, withName datasetFileName: String) {
+    private func saveDatasetToDisk(_ data: Data?, withName datasetFileName: String) {
         let datasetFilePath = self.documentsPath + "/" + datasetFileName
         do {
-            try data?.writeToFile(datasetFilePath, options: .AtomicWrite)
+            try data?.write(to: URL(fileURLWithPath: datasetFilePath), options: .atomicWrite)
             XperSingleton.instance.datasetsPathsDictionnary[datasetFileName] = datasetFilePath
         }
         catch  {

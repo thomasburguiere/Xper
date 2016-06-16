@@ -33,17 +33,17 @@ class DescriptorsTableViewController: UITableViewController, DescriptorsViewCont
     
     // MARK: - Table view data source functions
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return descriptors!.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("descriptorCell")as! DatasetObjectTableViewCell
-        let descriptor = descriptors![indexPath.row]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "descriptorCell")as! DatasetObjectTableViewCell
+        let descriptor = descriptors![(indexPath as NSIndexPath).row]
         cell.objectName?.text = descriptor.name
         
         return cell
@@ -51,13 +51,13 @@ class DescriptorsTableViewController: UITableViewController, DescriptorsViewCont
     
     // MARK Navigation setup
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDescriptorDetails" {
             let descriptorDetailViewController = segue.destinationViewController as! DescriptorDetailViewController
             
             if let selectedDescriptorCell = sender as? DatasetObjectTableViewCell {
-                let indexPath = tableView.indexPathForCell(selectedDescriptorCell)
-                let selectedDescriptor = descriptors![(indexPath?.row)!]
+                let indexPath = tableView.indexPath(for: selectedDescriptorCell)
+                let selectedDescriptor = descriptors![((indexPath as NSIndexPath?)?.row)!]
                 descriptorDetailViewController.descriptor = selectedDescriptor
             }
         }

@@ -11,5 +11,5 @@ import XperFramework
 
 protocol ItemsDatasource {
     func getItems() -> [Item]?
-    func register(itemsViewController itemsViewController: ItemsViewControllerProtocol)
+    func register(itemsViewController: ItemsViewControllerProtocol)
 }

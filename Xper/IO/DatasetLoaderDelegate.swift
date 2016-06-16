@@ -10,5 +10,5 @@ import Foundation
 import XperFramework
 
 protocol DatasetLoaderDelegate {
-    func datasetLoader(datasetLoader: DatasetLoader, didLoadDataset dataset: Dataset)
+    func datasetLoader(_ datasetLoader: DatasetLoader, didLoadDataset dataset: Dataset)
 }

@@ -24,15 +24,15 @@ class ItemDescriptionViewController: UITableViewController {
     
     var descriptorKeys : [Descriptor]? {
         if isEditMode {
-            return descriptorsDatasource?.getDescriptors()?.sort(descriptorNameSortFunction)
+            return descriptorsDatasource?.getDescriptors()?.sorted(isOrderedBefore: descriptorNameSortFunction)
         }
         else {
-            return Array(item!.itemDescription!.descriptionElements.keys).sort(descriptorNameSortFunction)
+            return Array(item!.itemDescription!.descriptionElements.keys).sorted(isOrderedBefore: descriptorNameSortFunction)
         }
     }
     
     @IBOutlet weak var editButton: UIBarButtonItem!
-    @IBAction func toggleEditMode(sender: AnyObject) {
+    @IBAction func toggleEditMode(_ sender: AnyObject) {
         isEditMode = !isEditMode
         editButton.title = isEditMode ? "Done" : "Edit"
         (self.view as! UITableView).reloadData()
@@ -51,11 +51,11 @@ class ItemDescriptionViewController: UITableViewController {
     
     // MARK: - Table view data source functions
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return descriptorKeys!.count
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let descriptorUsedAsKeyForSection = descriptorKeys![section]
         
         let des = item?.itemDescription?.descriptionElements[descriptorUsedAsKeyForSection]
@@ -72,23 +72,23 @@ class ItemDescriptionViewController: UITableViewController {
     }
     
 
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return descriptorKeys![section].name
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("descriptionCell") as! DescriptionTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionCell") as! DescriptionTableViewCell
         
-        let descriptorKey = descriptorKeys![indexPath.section]
+        let descriptorKey = descriptorKeys![(indexPath as NSIndexPath).section]
         let des = item?.itemDescription?.descriptionElements[descriptorKey]
         if descriptorKey.isCategorical{
-            let selectedStates = des?.selectedStates.sort(stateNameSortFunction)
+            let selectedStates = des?.selectedStates.sorted(isOrderedBefore: stateNameSortFunction)
             if !isEditMode {
-                cell.objectName.text = selectedStates![indexPath.row].name!
+                cell.objectName.text = selectedStates![(indexPath as NSIndexPath).row].name!
             }
             else {
-                let states = (descriptorKey as! CategoricalDescriptor).states.sort(stateNameSortFunction)
-                let currentState = states[indexPath.row]
+                let states = (descriptorKey as! CategoricalDescriptor).states.sorted(isOrderedBefore: stateNameSortFunction)
+                let currentState = states[(indexPath as NSIndexPath).row]
                 let isStateSelected = (selectedStates?.contains(currentState))!
                 cell.objectName.text = isStateSelected ? "✓ " + currentState.name! : "  " + currentState.name!
             }
@@ -101,15 +101,15 @@ class ItemDescriptionViewController: UITableViewController {
     }
     
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let descriptorKey = descriptorKeys![indexPath.section]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let descriptorKey = descriptorKeys![(indexPath as NSIndexPath).section]
         if isEditMode {
             if descriptorKey.isCategorical {
-                let selectedState = (descriptorKey as! CategoricalDescriptor).states.sort(stateNameSortFunction)[indexPath.row]
+                let selectedState = (descriptorKey as! CategoricalDescriptor).states.sorted(isOrderedBefore: stateNameSortFunction)[(indexPath as NSIndexPath).row]
                 let des = item?.itemDescription?.descriptionElements[descriptorKey]
                 let selectedStateContainedInDES = (des?.selectedStates.contains(selectedState))!
                 if selectedStateContainedInDES {
-                    des?.selectedStates.removeAtIndex(des!.selectedStates.indexOf(selectedState)!)
+                    des?.selectedStates.remove(at: des!.selectedStates.index(of: selectedState)!)
                 } else {
                     des?.selectedStates.append(selectedState)
                 }

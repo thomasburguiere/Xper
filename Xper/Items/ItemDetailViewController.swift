@@ -19,7 +19,7 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
     @IBOutlet weak var firstItemImageView: UIImageView!
     @IBOutlet weak var itemDetailText: UITextView!
     
-    func openImage(sender: UITapGestureRecognizer) {
+    func openImage(_ sender: UITapGestureRecognizer) {
         if let image = firstItemImageView.image {
             let agrume = Agrume(image: image)
             agrume.showFrom(self)
@@ -37,7 +37,7 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
             } else {
                 itemDetailText.setHTMLFromString("")
             }
-            let imageResource = item.resources.filter{$0.type == .Image}.first
+            let imageResource = item.resources.filter{$0.type == .image}.first
             if imageResource != nil {
                 if let imageURL = imageResource?.url {
                     firstItemImageView.setImageWithURL(imageURL)
@@ -47,13 +47,13 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ItemDetailViewController.openImage(_:)))
         tapGestureRecognizer.delegate = self
-        firstItemImageView.userInteractionEnabled = true
+        firstItemImageView.isUserInteractionEnabled = true
         firstItemImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     // MARK Navigation setup
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showItemDescription" {
             let itemDescriptionViewController = segue.destinationViewController as! ItemDescriptionViewController
             itemDescriptionViewController.item = item

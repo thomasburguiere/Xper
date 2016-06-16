@@ -49,17 +49,17 @@ class MainViewController : UIViewController,  UITableViewDataSource, UITableView
     
     // MARK: - Table view data source functions
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return XperSingleton.instance.datasetsPathsDictionnary.keys.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("savedDatasetCell")as! DatasetObjectTableViewCell
-        let datasetName = datasetNameKeys[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "savedDatasetCell")as! DatasetObjectTableViewCell
+        let datasetName = datasetNameKeys[(indexPath as NSIndexPath).row]
         cell.objectName?.text = datasetName
         
         return cell
@@ -67,8 +67,8 @@ class MainViewController : UIViewController,  UITableViewDataSource, UITableView
     
     // MARK: - Table view delegate functions
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let datasetName = datasetNameKeys[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let datasetName = datasetNameKeys[(indexPath as NSIndexPath).row]
         XperSingleton.instance.datasetLoader.loadExistingDataset(named: datasetName)
         
     }

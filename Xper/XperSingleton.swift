@@ -12,7 +12,7 @@ class XperSingleton {
     
     static let instance = XperSingleton()
     
-    var fileToOpenURL: NSURL?
+    var fileToOpenURL: URL?
     var datasetLoader = DatasetLoader()
     var datasetsPathsDictionnary = [String:String]()
     

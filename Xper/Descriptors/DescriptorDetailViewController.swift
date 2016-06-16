@@ -33,17 +33,17 @@ class DescriptorDetailViewController: UIViewController, UINavigationControllerDe
     
     // MARK: - Table view data source functions
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (descriptor! as! CategoricalDescriptor).states.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("stateCell")as! DatasetObjectTableViewCell
-        let state = (descriptor! as! CategoricalDescriptor).states[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stateCell")as! DatasetObjectTableViewCell
+        let state = (descriptor! as! CategoricalDescriptor).states[(indexPath as NSIndexPath).row]
         cell.objectName?.text = state.name
         
         return cell

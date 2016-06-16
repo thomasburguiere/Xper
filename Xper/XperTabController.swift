@@ -20,7 +20,7 @@ class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasou
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if let fileToOpenUrl = XperSingleton.instance.fileToOpenURL {
-            loadOpenedData(fileToOpenUrl)
+            loadOpenedData(fileToOpenUrl as URL)
         } else {
             loadSampleData()
         }
@@ -47,7 +47,7 @@ class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasou
     }
     
     // MARK: DatasetLoaderDelegate
-    func datasetLoader(datasetLoader: DatasetLoader, didLoadDataset dataset: Dataset) {
+    func datasetLoader(_ datasetLoader: DatasetLoader, didLoadDataset dataset: Dataset) {
         self.dataset = dataset
         itemsViewController?.reload()
         descriptorsViewController?.reload()
@@ -60,7 +60,7 @@ class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasou
         return dataset?.items
     }
     
-    func register(itemsViewController itemsViewController: ItemsViewControllerProtocol) {
+    func register(itemsViewController: ItemsViewControllerProtocol) {
         self.itemsViewController = itemsViewController
     }
     
@@ -69,7 +69,7 @@ class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasou
         return dataset?.descriptors
     }
     
-    func register(descriptorsViewController descriptorsViewController: DescriptorsViewControllerProtocol) {
+    func register(descriptorsViewController: DescriptorsViewControllerProtocol) {
         self.descriptorsViewController = descriptorsViewController
     }
     
@@ -95,19 +95,19 @@ class XperTabController: UITabBarController, ItemsDatasource, DescriptorsDatasou
         }
     }
     
-    private func loadOpenedData(openedFileUrl: NSURL) {
-        let sampleFileData = NSData(contentsOfURL: openedFileUrl)
+    private func loadOpenedData(_ openedFileUrl: URL) {
+        let sampleFileData = try? Data(contentsOf: openedFileUrl)
         let parser = SddNSXMLParser()
         dataset = parser.parseDataset(sampleFileData)
     }
     
     private func loadSampleData() {
         XperSingleton.instance.datasetLoader.listExistingDatasets()
-        let sampleFilePath = NSBundle.mainBundle().pathForResource("genetta", ofType: "sdd.xml")
-        let sampleFileData = NSData(contentsOfFile: sampleFilePath!)
-        let filePath = (NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String) + "/" + "genetta.sdd"
+        let sampleFilePath = Bundle.main().pathForResource("genetta", ofType: "sdd.xml")
+        let sampleFileData = try? Data(contentsOf: URL(fileURLWithPath: sampleFilePath!))
+        let filePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String) + "/" + "genetta.sdd"
         do {
-            try sampleFileData?.writeToFile(filePath, options: .AtomicWrite)
+            try sampleFileData?.write(to: URL(fileURLWithPath: filePath), options: .atomicWrite)
             XperSingleton.instance.datasetsPathsDictionnary["genetta"] = sampleFilePath
         }
         catch  {

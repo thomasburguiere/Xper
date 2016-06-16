@@ -331,15 +331,18 @@
 					E9ECC4851C921863002833FF = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = AW8TQBV7G4;
+						LastSwiftMigration = 0800;
 					};
 					E9ECC4991C921864002833FF = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = AW8TQBV7G4;
+						LastSwiftMigration = 0800;
 						TestTargetID = E9ECC4851C921863002833FF;
 					};
 					E9ECC4A41C921864002833FF = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = AW8TQBV7G4;
+						LastSwiftMigration = 0800;
 						TestTargetID = E9ECC4851C921863002833FF;
 					};
 				};
@@ -599,6 +602,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ch.burguiere.thomas.Xper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -619,6 +623,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ch.burguiere.thomas.Xper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -630,6 +635,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.burguiere.thomas.XperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Xper.app/Xper";
 			};
 			name = Debug;
@@ -642,6 +648,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.burguiere.thomas.XperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Xper.app/Xper";
 			};
 			name = Release;
@@ -653,6 +660,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.burguiere.thomas.XperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Xper;
 				USES_XCTRUNNER = YES;
 			};
@@ -665,6 +673,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.burguiere.thomas.XperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Xper;
 				USES_XCTRUNNER = YES;
 			};

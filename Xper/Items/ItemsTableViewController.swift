@@ -35,17 +35,17 @@ class ItemsTableViewController: UITableViewController, ItemsViewControllerProtoc
     
     // MARK: - Table view data source functions
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items!.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("itemCell") as! DatasetObjectTableViewCell
-        let item = items![indexPath.row]
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "itemCell") as! DatasetObjectTableViewCell
+        let item = items![(indexPath as NSIndexPath).row]
         cell.objectName?.text = item.name
         
         return cell
@@ -53,14 +53,14 @@ class ItemsTableViewController: UITableViewController, ItemsViewControllerProtoc
     
     // MARK Navigation setup
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showItemDetail" {
             let itemDetailViewController = segue.destinationViewController as! ItemDetailViewController
             
             // Get the cell that generated this segue.
             if let selectedItemCell = sender as? DatasetObjectTableViewCell {
-                let indexPath = tableView.indexPathForCell(selectedItemCell)
-                let selectedItem = items![(indexPath?.row)!]
+                let indexPath = tableView.indexPath(for: selectedItemCell)
+                let selectedItem = items![((indexPath as NSIndexPath?)?.row)!]
                 itemDetailViewController.item = selectedItem
                 itemDetailViewController.descriptorsDatasource = descriptorsDatasource
             }
