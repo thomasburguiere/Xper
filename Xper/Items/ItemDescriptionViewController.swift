@@ -14,20 +14,20 @@ class ItemDescriptionViewController: UITableViewController {
     var descriptorsDatasource: DescriptorsDatasource?
     
     let descriptorNameSortFunction = { (descriptor1: Descriptor, descriptor2: Descriptor) -> Bool in
-        return descriptor1.name < descriptor2.name
+        return descriptor1.name! < descriptor2.name!
     }
     
     let stateNameSortFunction = { (State1: State, state2: State) -> Bool in
-        return State1.name < state2.name
+        return State1.name! < state2.name!
     }
 
     
     var descriptorKeys : [Descriptor]? {
         if isEditMode {
-            return descriptorsDatasource?.getDescriptors()?.sorted(isOrderedBefore: descriptorNameSortFunction)
+            return descriptorsDatasource?.getDescriptors()?.sorted(by: descriptorNameSortFunction)
         }
         else {
-            return Array(item!.itemDescription!.descriptionElements.keys).sorted(isOrderedBefore: descriptorNameSortFunction)
+            return Array(item!.itemDescription!.descriptionElements.keys).sorted(by: descriptorNameSortFunction)
         }
     }
     
@@ -82,12 +82,12 @@ class ItemDescriptionViewController: UITableViewController {
         let descriptorKey = descriptorKeys![(indexPath as NSIndexPath).section]
         let des = item?.itemDescription?.descriptionElements[descriptorKey]
         if descriptorKey.isCategorical{
-            let selectedStates = des?.selectedStates.sorted(isOrderedBefore: stateNameSortFunction)
+            let selectedStates = des?.selectedStates.sorted(by: stateNameSortFunction)
             if !isEditMode {
                 cell.objectName.text = selectedStates![(indexPath as NSIndexPath).row].name!
             }
             else {
-                let states = (descriptorKey as! CategoricalDescriptor).states.sorted(isOrderedBefore: stateNameSortFunction)
+                let states = (descriptorKey as! CategoricalDescriptor).states.sorted(by: stateNameSortFunction)
                 let currentState = states[(indexPath as NSIndexPath).row]
                 let isStateSelected = (selectedStates?.contains(currentState))!
                 cell.objectName.text = isStateSelected ? "✓ " + currentState.name! : "  " + currentState.name!
@@ -105,7 +105,7 @@ class ItemDescriptionViewController: UITableViewController {
         let descriptorKey = descriptorKeys![(indexPath as NSIndexPath).section]
         if isEditMode {
             if descriptorKey.isCategorical {
-                let selectedState = (descriptorKey as! CategoricalDescriptor).states.sorted(isOrderedBefore: stateNameSortFunction)[(indexPath as NSIndexPath).row]
+                let selectedState = (descriptorKey as! CategoricalDescriptor).states.sorted(by: stateNameSortFunction)[(indexPath as NSIndexPath).row]
                 let des = item?.itemDescription?.descriptionElements[descriptorKey]
                 let selectedStateContainedInDES = (des?.selectedStates.contains(selectedState))!
                 if selectedStateContainedInDES {

@@ -53,9 +53,9 @@ class ItemsTableViewController: UITableViewController, ItemsViewControllerProtoc
     
     // MARK Navigation setup
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showItemDetail" {
-            let itemDetailViewController = segue.destinationViewController as! ItemDetailViewController
+            let itemDetailViewController = segue.destination as! ItemDetailViewController
             
             // Get the cell that generated this segue.
             if let selectedItemCell = sender as? DatasetObjectTableViewCell {

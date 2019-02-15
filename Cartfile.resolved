@@ -1,3 +1,4 @@
-github "JanGorman/Agrume" "2.4.0"
-github "zalando/MapleBacon" "2.0.8"
-github "thomasburguiere/Xper-framework" "ca2aa59177de5cd3ebd1ca03079977e7684c70a1"
+github "JanGorman/Agrume" "5.2.4"
+github "kirualex/SwiftyGif" "4.2.0"
+github "thomasburguiere/Xper-framework" "c50196b1f4ce0a04971b7e075535b3ff3eef530a"
+github "zalando/MapleBacon" "5.2.1"

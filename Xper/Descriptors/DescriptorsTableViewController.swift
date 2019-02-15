@@ -51,9 +51,9 @@ class DescriptorsTableViewController: UITableViewController, DescriptorsViewCont
     
     // MARK Navigation setup
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDescriptorDetails" {
-            let descriptorDetailViewController = segue.destinationViewController as! DescriptorDetailViewController
+            let descriptorDetailViewController = segue.destination as! DescriptorDetailViewController
             
             if let selectedDescriptorCell = sender as? DatasetObjectTableViewCell {
                 let indexPath = tableView.indexPath(for: selectedDescriptorCell)

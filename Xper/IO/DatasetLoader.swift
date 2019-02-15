@@ -20,7 +20,7 @@ class DatasetLoader {
     }
 
     func listExistingDatasets() {
-        let fileManager = FileManager.default()
+        let fileManager = FileManager.init()
         let enumerator = fileManager.enumerator(atPath: documentsPath)
         while let element = enumerator?.nextObject() as? String {
             if element.hasSuffix("sdd") { // checks the extension
@@ -59,7 +59,7 @@ class DatasetLoader {
     func loadDatasetFromRemoteUrl(_ url: URL?) {
         
         // 1
-        let defaultSession = URLSession(configuration: URLSessionConfiguration.default())
+        let defaultSession = URLSession(configuration: URLSessionConfiguration.default)
         // 2
         var dataTask: URLSessionDataTask?
         
@@ -69,14 +69,14 @@ class DatasetLoader {
             dataTask?.cancel()
         }
         
-        UIApplication.shared().isNetworkActivityIndicatorVisible = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         // 5
         dataTask = defaultSession.dataTask(with: url!) {
             data, response, error in
             // 6
             DispatchQueue.main.async {
-                UIApplication.shared().isNetworkActivityIndicatorVisible = false
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 
                 // 7
                 if let error = error {

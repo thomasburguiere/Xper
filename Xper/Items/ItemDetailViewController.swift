@@ -22,7 +22,7 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
     func openImage(_ sender: UITapGestureRecognizer) {
         if let image = firstItemImageView.image {
             let agrume = Agrume(image: image)
-            agrume.showFrom(self)
+            agrume.show(from: self)
         }
     }
 
@@ -40,7 +40,7 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
             let imageResource = item.resources.filter{$0.type == .image}.first
             if imageResource != nil {
                 if let imageURL = imageResource?.url {
-                    firstItemImageView.setImageWithURL(imageURL)
+                    firstItemImageView.setImage(with:URL.init(string: imageURL))
                 }
             }
         }
@@ -53,9 +53,9 @@ class ItemDetailViewController: UIViewController, UINavigationControllerDelegate
     
     // MARK Navigation setup
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showItemDescription" {
-            let itemDescriptionViewController = segue.destinationViewController as! ItemDescriptionViewController
+            let itemDescriptionViewController = segue.destination as! ItemDescriptionViewController
             itemDescriptionViewController.item = item
             itemDescriptionViewController.descriptorsDatasource = descriptorsDatasource
             
